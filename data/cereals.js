@@ -15,7 +15,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 68.402973
+   "rating": 68.40297,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "100% Natural Bran",
@@ -33,7 +34,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 33.983679
+   "rating": 33.98367,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "All-Bran",
@@ -51,7 +53,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 59.425505
+   "rating": 59.42550,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "All-Bran with Extra Fiber",
@@ -69,7 +72,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 93.704912
+   "rating": 93.70491,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Almond Delight",
@@ -87,7 +91,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 34.384843
+   "rating": 34.38484,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Apple Cinnamon Cheerios",
@@ -105,7 +110,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 29.509541
+   "rating": 29.50954,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Apple Jacks",
@@ -123,7 +129,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 33.174094
+   "rating": 33.17409,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Basic 4",
@@ -141,7 +148,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.75,
-   "rating": 37.038562
+   "rating": 37.03856,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Bran Chex",
@@ -159,7 +167,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 49.120253
+   "rating": 49.12025,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Bran Flakes",
@@ -177,7 +186,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.67,
-   "rating": 53.313813
+   "rating": 53.31381,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cap'n'Crunch",
@@ -195,7 +205,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 18.042851
+   "rating": 18.04285,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cheerios",
@@ -213,7 +224,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.25,
-   "rating": 50.764999
+   "rating": 50.76499,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cinnamon Toast Crunch",
@@ -231,7 +243,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 19.823573
+   "rating": 19.82357,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Clusters",
@@ -249,7 +262,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 40.400208
+   "rating": 40.40020,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cocoa Puffs",
@@ -267,7 +281,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 22.736446
+   "rating": 22.73644,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Corn Chex",
@@ -285,7 +300,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 41.445019
+   "rating": 41.44501,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Corn Flakes",
@@ -303,7 +319,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 45.863324
+   "rating": 45.86332,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Corn Pops",
@@ -321,7 +338,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 35.782791
+   "rating": 35.78279,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Count Chocula",
@@ -339,7 +357,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 22.396513
+   "rating": 22.39651,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cracklin' Oat Bran",
@@ -357,7 +376,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 40.448772
+   "rating": 40.44877,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Cream of Wheat (Quick)",
@@ -375,7 +395,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 64.533816
+   "rating": 64.53381,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Crispix",
@@ -393,7 +414,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 46.895644
+   "rating": 46.89564,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Crispy Wheat & Raisins",
@@ -411,7 +433,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 36.176196
+   "rating": 36.17619,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Double Chex",
@@ -429,7 +452,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 44.330856
+   "rating": 44.33085,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Froot Loops",
@@ -447,7 +471,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 32.207582
+   "rating": 32.20758,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Frosted Flakes",
@@ -465,7 +490,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.435973
+   "rating": 31.43597,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Frosted Mini-Wheats",
@@ -483,7 +509,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.8,
-   "rating": 58.345141
+   "rating": 58.34514,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Fruit & Fibre Dates, Walnuts, and Oats",
@@ -501,7 +528,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.25,
    "cups": 0.67,
-   "rating": 40.917047
+   "rating": 40.91704,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Fruitful Bran",
@@ -519,7 +547,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 41.015492
+   "rating": 41.01549,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Fruity Pebbles",
@@ -537,7 +566,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 28.025765
+   "rating": 28.02576,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Golden Crisp",
@@ -555,7 +585,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.88,
-   "rating": 35.252444
+   "rating": 35.25244,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Golden Grahams",
@@ -573,7 +604,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 23.804043
+   "rating": 23.80404,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Grape Nuts Flakes",
@@ -591,7 +623,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.88,
-   "rating": 52.076897
+   "rating": 52.07689,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Grape-Nuts",
@@ -609,7 +642,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.25,
-   "rating": 53.371007
+   "rating": 53.37100,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Great Grains Pecan",
@@ -627,7 +661,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 45.811716
+   "rating": 45.81171,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Honey Graham Ohs",
@@ -645,7 +680,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 21.871292
+   "rating": 21.87129,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Honey Nut Cheerios",
@@ -663,7 +699,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.072217
+   "rating": 31.07221,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Honey-comb",
@@ -681,7 +718,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.33,
-   "rating": 28.742414
+   "rating": 28.74241,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Just Right Crunchy  Nuggets",
@@ -699,7 +737,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 36.523683
+   "rating": 36.52368,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Just Right Fruit & Nut",
@@ -717,7 +756,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.3,
    "cups": 0.75,
-   "rating": 36.471512
+   "rating": 36.47151,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Kix",
@@ -735,7 +775,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1.5,
-   "rating": 39.241114
+   "rating": 39.24111,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Life",
@@ -753,7 +794,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.67,
-   "rating": 45.328074
+   "rating": 45.32807,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Lucky Charms",
@@ -771,7 +813,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 26.734515
+   "rating": 26.73451,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Maypo",
@@ -789,7 +832,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 54.850917
+   "rating": 54.85091,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Muesli Raisins, Dates, & Almonds",
@@ -807,7 +851,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 37.136863
+   "rating": 37.13686,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Muesli Raisins, Peaches, & Pecans",
@@ -825,7 +870,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 34.139765
+   "rating": 34.13976,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Mueslix Crispy Blend",
@@ -843,7 +889,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.5,
    "cups": 0.67,
-   "rating": 30.313351
+   "rating": 30.31335,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Multi-Grain Cheerios",
@@ -861,7 +908,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 40.105965
+   "rating": 40.10596,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Nut&Honey Crunch",
@@ -879,7 +927,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.67,
-   "rating": 29.924285
+   "rating": 29.92428,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Nutri-Grain Almond-Raisin",
@@ -897,7 +946,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 40.69232
+   "rating": 40.6923,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Nutri-grain Wheat",
@@ -915,7 +965,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 59.642837
+   "rating": 59.64283,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Oatmeal Raisin Crisp",
@@ -933,7 +984,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.25,
    "cups": 0.5,
-   "rating": 30.450843
+   "rating": 30.45084,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Post Nat. Raisin Bran",
@@ -951,7 +1003,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 37.840594
+   "rating": 37.84059,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Product 19",
@@ -969,7 +1022,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 41.50354
+   "rating": 41.5035,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Puffed Rice",
@@ -987,7 +1041,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 0.5,
    "cups": 1,
-   "rating": 60.756112
+   "rating": 60.75611,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Puffed Wheat",
@@ -1005,7 +1060,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 0.5,
    "cups": 1,
-   "rating": 63.005645
+   "rating": 63.00564,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Quaker Oat Squares",
@@ -1023,7 +1079,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 49.511874
+   "rating": 49.51187,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Quaker Oatmeal",
@@ -1041,7 +1098,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 50.828392
+   "rating": 50.82839,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Raisin Bran",
@@ -1059,7 +1117,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1.33,
    "cups": 0.75,
-   "rating": 39.259197
+   "rating": 39.25919,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Raisin Nut Bran",
@@ -1077,7 +1136,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 39.7034
+   "rating": 39.703,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Raisin Squares",
@@ -1095,7 +1155,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 55.333142
+   "rating": 55.33314,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Rice Chex",
@@ -1113,7 +1174,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.13,
-   "rating": 41.998933
+   "rating": 41.99893,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Rice Krispies",
@@ -1131,7 +1193,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 40.560159
+   "rating": 40.56015,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Shredded Wheat",
@@ -1149,7 +1212,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 0.83,
    "cups": 1,
-   "rating": 68.235885
+   "rating": 68.23588,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Shredded Wheat 'n'Bran",
@@ -1167,7 +1231,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 74.472949
+   "rating": 74.47294,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Shredded Wheat spoon size",
@@ -1185,7 +1250,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 72.801787
+   "rating": 72.80178,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Smacks",
@@ -1203,7 +1269,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.230054
+   "rating": 31.23005,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Special K",
@@ -1221,7 +1288,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 53.131324
+   "rating": 53.13132,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Strawberry Fruit Wheats",
@@ -1239,7 +1307,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 59.363993
+   "rating": 59.36399,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Total Corn Flakes",
@@ -1257,7 +1326,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 38.839746
+   "rating": 38.83974,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Total Raisin Bran",
@@ -1275,7 +1345,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.5,
    "cups": 1,
-   "rating": 28.592785
+   "rating": 28.59278,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Total Whole Grain",
@@ -1293,7 +1364,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 46.658844
+   "rating": 46.65884,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Triples",
@@ -1311,7 +1383,8 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 39.106174
+   "rating": 39.10617,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Trix",
@@ -1329,7 +1402,8 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 27.753301
+   "rating": 27.75330,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Wheat Chex",
@@ -1347,7 +1421,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 49.787445
+   "rating": 49.78744,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Wheaties",
@@ -1365,7 +1440,8 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 51.592193
+   "rating": 51.59219,
+   "id": "43_KIX.jpg"
  },
  {
    "name": "Wheaties Honey Gold",
@@ -1383,6 +1459,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 36.187559
+   "rating": 36.18755,
+   "id": "43_KIX.jpg"
  }
 ]
