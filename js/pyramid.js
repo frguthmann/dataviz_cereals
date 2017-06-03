@@ -1,5 +1,5 @@
 // Constants:
-var rowsModelSize = [1,5,10];
+var rowsModelSize = [5,30,42];
 var rowsViewSize = [1,3,5];
 
 /*  The pyramid contains three thing:
@@ -9,19 +9,6 @@ var rowsViewSize = [1,3,5];
 
     => All this will be fed automatically from the data file
 */
-/*var pyramid = {
-  modelRows: [
-    [{source: "images/3.jpg"}],
-    [{source: "images/1.jpg"},{source: "images/41.jpg"},{source: "images/44.jpg"},{source: "images/54.jpg"},{source: "images/2.jpg"}],
-    [{source: "images/14.jpg"},{source: "images/55.jpg"},{source: "images/70.jpg"},{source: "images/75.jpg"},{source: "images/2.jpg"}, {source: "images/4.jpg"},{source: "images/5.jpg"},{source: "images/7.jpg"},{source: "images/8.jpg"},{source: "images/9.jpg"}]
-  ],
-  viewRows: [
-  ["DOM_ELEMENT"],
-  ["DOM_ELEMENT","DOM_ELEMENT","DOM_ELEMENT"],
-  ["DOM_ELEMENT","DOM_ELEMENT","DOM_ELEMENT","DOM_ELEMENT","DOM_ELEMENT"],
-  ],
-  idxModel:[0,0,0]
-};*/
 var pyramid = {
   modelRows: [],
   viewRows: [],
@@ -39,10 +26,11 @@ function loadData(){
     var row = 0;
     var im = 0;
     var tempRow = [];
-    var cell = {source: "none"};
-    for(idx=0; idx<16; idx++){  // < cereals_data.length
+    for(idx=0; idx < cereals_data.length; idx++){
         // Let's load the image supposed to go with this
-        cell.source = "images/" + cereals_data[idx].id;
+        var cell = {};
+        cell.source = "images/" + cereals_data[idx].id + ".jpg";
+        //console.log("images/" + cereals_data[idx].id + ".jpg");
         tempRow.push(cell);
         im++;
         // Check if we loaded all the images for this row. In this case, push the row and go to the next one
@@ -52,6 +40,7 @@ function loadData(){
             tempRow = [];
             im = 0;
             row++;
+            console.log(pyramid);
         }
     }
 }
@@ -67,8 +56,6 @@ function firstPyramidSetup(){
       var cell = document.getElementById("r" + r + "im" + im);
       cell.src = pyramid.modelRows[r][im].source;
       tempRow.push(cell);
-      /*pyramid.viewRows[r][im] = document.getElementById("r" + r + "im" + im);
-      pyramid.viewRows[r][im].src = pyramid.modelRows[r][im].source;*/
     }
     pyramid.viewRows.push(tempRow);
   }

@@ -16,8 +16,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 68.40297,
-   "id": "43_KIX.jpg"
+   "rating": 68.402973
  },
  {
    "id": "2",
@@ -36,8 +35,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 33.98367,
-   "id": "43_KIX.jpg"
+   "rating": 33.983679
  },
  {
    "id": "3",
@@ -56,8 +54,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 59.42550,
-   "id": "43_KIX.jpg"
+   "rating": 59.425505
  },
  {
    "id": "4",
@@ -76,8 +73,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 93.70491,
-   "id": "43_KIX.jpg"
+   "rating": 93.704912
  },
  {
    "id": "5",
@@ -96,8 +92,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 34.38484,
-   "id": "43_KIX.jpg"
+   "rating": 34.384843
  },
  {
    "id": "6",
@@ -116,8 +111,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 29.50954,
-   "id": "43_KIX.jpg"
+   "rating": 29.509541
  },
  {
    "id": "7",
@@ -136,8 +130,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 33.17409,
-   "id": "43_KIX.jpg"
+   "rating": 33.174094
  },
  {
    "id": "8",
@@ -156,8 +149,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.75,
-   "rating": 37.03856,
-   "id": "43_KIX.jpg"
+   "rating": 37.038562
  },
  {
    "id": "9",
@@ -176,8 +168,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 49.12025,
-   "id": "43_KIX.jpg"
+   "rating": 49.120253
  },
  {
    "id": "10",
@@ -196,8 +187,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.67,
-   "rating": 53.31381,
-   "id": "43_KIX.jpg"
+   "rating": 53.313813
  },
  {
    "id": "11",
@@ -216,8 +206,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 18.04285,
-   "id": "43_KIX.jpg"
+   "rating": 18.042851
  },
  {
    "id": "12",
@@ -236,8 +225,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.25,
-   "rating": 50.76499,
-   "id": "43_KIX.jpg"
+   "rating": 50.764999
  },
  {
    "id": "13",
@@ -256,8 +244,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 19.82357,
-   "id": "43_KIX.jpg"
+   "rating": 19.823573
  },
  {
    "id": "14",
@@ -276,8 +263,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 40.40020,
-   "id": "43_KIX.jpg"
+   "rating": 40.400208
  },
  {
    "id": "15",
@@ -296,8 +282,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 22.73644,
-   "id": "43_KIX.jpg"
+   "rating": 22.736446
  },
  {
    "id": "16",
@@ -316,8 +301,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 41.44501,
-   "id": "43_KIX.jpg"
+   "rating": 41.445019
  },
  {
    "id": "17",
@@ -336,8 +320,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 45.86332,
-   "id": "43_KIX.jpg"
+   "rating": 45.863324
  },
  {
    "id": "18",
@@ -356,8 +339,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 35.78279,
-   "id": "43_KIX.jpg"
+   "rating": 35.782791
  },
  {
    "id": "19",
@@ -376,8 +358,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 22.39651,
-   "id": "43_KIX.jpg"
+   "rating": 22.396513
  },
  {
    "id": "20",
@@ -396,8 +377,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 40.44877,
-   "id": "43_KIX.jpg"
+   "rating": 40.448772
  },
  {
    "id": "21",
@@ -416,8 +396,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 64.53381,
-   "id": "43_KIX.jpg"
+   "rating": 64.533816
  },
  {
    "id": "22",
@@ -436,8 +415,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 46.89564,
-   "id": "43_KIX.jpg"
+   "rating": 46.895644
  },
  {
    "id": "23",
@@ -456,8 +434,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 36.17619,
-   "id": "43_KIX.jpg"
+   "rating": 36.176196
  },
  {
    "id": "24",
@@ -476,8 +453,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 44.33085,
-   "id": "43_KIX.jpg"
+   "rating": 44.330856
  },
  {
    "id": "25",
@@ -496,8 +472,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 32.20758,
-   "id": "43_KIX.jpg"
+   "rating": 32.207582
  },
  {
    "id": "26",
@@ -516,8 +491,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.43597,
-   "id": "43_KIX.jpg"
+   "rating": 31.435973
  },
  {
    "id": "27",
@@ -536,8 +510,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.8,
-   "rating": 58.34514,
-   "id": "43_KIX.jpg"
+   "rating": 58.345141
  },
  {
    "id": "28",
@@ -556,8 +529,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.25,
    "cups": 0.67,
-   "rating": 40.91704,
-   "id": "43_KIX.jpg"
+   "rating": 40.917047
  },
  {
    "id": "29",
@@ -576,8 +548,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 41.01549,
-   "id": "43_KIX.jpg"
+   "rating": 41.015492
  },
  {
    "id": "30",
@@ -596,8 +567,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 28.02576,
-   "id": "43_KIX.jpg"
+   "rating": 28.025765
  },
  {
    "id": "31",
@@ -616,8 +586,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.88,
-   "rating": 35.25244,
-   "id": "43_KIX.jpg"
+   "rating": 35.252444
  },
  {
    "id": "32",
@@ -636,8 +605,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 23.80404,
-   "id": "43_KIX.jpg"
+   "rating": 23.804043
  },
  {
    "id": "33",
@@ -656,8 +624,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.88,
-   "rating": 52.07689,
-   "id": "43_KIX.jpg"
+   "rating": 52.076897
  },
  {
    "id": "34",
@@ -676,8 +643,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.25,
-   "rating": 53.37100,
-   "id": "43_KIX.jpg"
+   "rating": 53.371007
  },
  {
    "id": "35",
@@ -696,8 +662,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.33,
-   "rating": 45.81171,
-   "id": "43_KIX.jpg"
+   "rating": 45.811716
  },
  {
    "id": "36",
@@ -716,8 +681,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 21.87129,
-   "id": "43_KIX.jpg"
+   "rating": 21.871292
  },
  {
    "id": "37",
@@ -736,8 +700,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.07221,
-   "id": "43_KIX.jpg"
+   "rating": 31.072217
  },
  {
    "id": "38",
@@ -756,8 +719,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.33,
-   "rating": 28.74241,
-   "id": "43_KIX.jpg"
+   "rating": 28.742414
  },
  {
    "id": "39",
@@ -776,8 +738,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 36.52368,
-   "id": "43_KIX.jpg"
+   "rating": 36.523683
  },
  {
    "id": "40",
@@ -796,8 +757,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.3,
    "cups": 0.75,
-   "rating": 36.47151,
-   "id": "43_KIX.jpg"
+   "rating": 36.471512
  },
  {
    "id": "41",
@@ -816,8 +776,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1.5,
-   "rating": 39.24111,
-   "id": "43_KIX.jpg"
+   "rating": 39.241114
  },
  {
    "id": "42",
@@ -836,8 +795,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.67,
-   "rating": 45.32807,
-   "id": "43_KIX.jpg"
+   "rating": 45.328074
  },
  {
    "id": "43",
@@ -856,8 +814,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 26.73451,
-   "id": "43_KIX.jpg"
+   "rating": 26.734515
  },
  {
    "id": "44",
@@ -876,8 +833,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 54.85091,
-   "id": "43_KIX.jpg"
+   "rating": 54.850917
  },
  {
    "id": "45",
@@ -896,8 +852,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 37.13686,
-   "id": "43_KIX.jpg"
+   "rating": 37.136863
  },
  {
    "id": "46",
@@ -916,8 +871,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 34.13976,
-   "id": "43_KIX.jpg"
+   "rating": 34.139765
  },
  {
    "id": "47",
@@ -936,8 +890,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.5,
    "cups": 0.67,
-   "rating": 30.31335,
-   "id": "43_KIX.jpg"
+   "rating": 30.313351
  },
  {
    "id": "48",
@@ -956,8 +909,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 40.10596,
-   "id": "43_KIX.jpg"
+   "rating": 40.105965
  },
  {
    "id": "49",
@@ -976,8 +928,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.67,
-   "rating": 29.92428,
-   "id": "43_KIX.jpg"
+   "rating": 29.924285
  },
  {
    "id": "50",
@@ -996,8 +947,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 40.6923,
-   "id": "43_KIX.jpg"
+   "rating": 40.69232
  },
  {
    "id": "51",
@@ -1016,8 +966,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 59.64283,
-   "id": "43_KIX.jpg"
+   "rating": 59.642837
  },
  {
    "id": "52",
@@ -1036,8 +985,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.25,
    "cups": 0.5,
-   "rating": 30.45084,
-   "id": "43_KIX.jpg"
+   "rating": 30.450843
  },
  {
    "id": "53",
@@ -1056,8 +1004,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.33,
    "cups": 0.67,
-   "rating": 37.84059,
-   "id": "43_KIX.jpg"
+   "rating": 37.840594
  },
  {
    "id": "54",
@@ -1076,8 +1023,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 41.5035,
-   "id": "43_KIX.jpg"
+   "rating": 41.50354
  },
  {
    "id": "55",
@@ -1096,8 +1042,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 0.5,
    "cups": 1,
-   "rating": 60.75611,
-   "id": "43_KIX.jpg"
+   "rating": 60.756112
  },
  {
    "id": "56",
@@ -1116,8 +1061,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 0.5,
    "cups": 1,
-   "rating": 63.00564,
-   "id": "43_KIX.jpg"
+   "rating": 63.005645
  },
  {
    "id": "57",
@@ -1136,8 +1080,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 49.51187,
-   "id": "43_KIX.jpg"
+   "rating": 49.511874
  },
  {
    "id": "58",
@@ -1156,8 +1099,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 50.82839,
-   "id": "43_KIX.jpg"
+   "rating": 50.828392
  },
  {
    "id": "59",
@@ -1176,8 +1118,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1.33,
    "cups": 0.75,
-   "rating": 39.25919,
-   "id": "43_KIX.jpg"
+   "rating": 39.259197
  },
  {
    "id": "60",
@@ -1196,8 +1137,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 39.703,
-   "id": "43_KIX.jpg"
+   "rating": 39.7034
  },
  {
    "id": "61",
@@ -1216,8 +1156,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.5,
-   "rating": 55.33314,
-   "id": "43_KIX.jpg"
+   "rating": 55.333142
  },
  {
    "id": "62",
@@ -1236,8 +1175,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1.13,
-   "rating": 41.99893,
-   "id": "43_KIX.jpg"
+   "rating": 41.998933
  },
  {
    "id": "63",
@@ -1256,8 +1194,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 40.56015,
-   "id": "43_KIX.jpg"
+   "rating": 40.560159
  },
  {
    "id": "64",
@@ -1276,8 +1213,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 0.83,
    "cups": 1,
-   "rating": 68.23588,
-   "id": "43_KIX.jpg"
+   "rating": 68.235885
  },
  {
    "id": "65",
@@ -1296,8 +1232,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 74.47294,
-   "id": "43_KIX.jpg"
+   "rating": 74.472949
  },
  {
    "id": "66",
@@ -1316,8 +1251,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 72.80178,
-   "id": "43_KIX.jpg"
+   "rating": 72.801787
  },
  {
    "id": "67",
@@ -1336,8 +1270,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 0.75,
-   "rating": 31.23005,
-   "id": "43_KIX.jpg"
+   "rating": 31.230054
  },
  {
    "id": "68",
@@ -1356,8 +1289,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 53.13132,
-   "id": "43_KIX.jpg"
+   "rating": 53.131324
  },
  {
    "id": "69",
@@ -1376,8 +1308,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 59.36399,
-   "id": "43_KIX.jpg"
+   "rating": 59.363993
  },
  {
    "id": "70",
@@ -1396,8 +1327,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 38.83974,
-   "id": "43_KIX.jpg"
+   "rating": 38.839746
  },
  {
    "id": "71",
@@ -1416,8 +1346,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1.5,
    "cups": 1,
-   "rating": 28.59278,
-   "id": "43_KIX.jpg"
+   "rating": 28.592785
  },
  {
    "id": "72",
@@ -1436,8 +1365,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 1,
-   "rating": 46.65884,
-   "id": "43_KIX.jpg"
+   "rating": 46.658844
  },
  {
    "id": "73",
@@ -1456,8 +1384,7 @@ var cereals_data = [
    "shelf": 3,
    "weight": 1,
    "cups": 0.75,
-   "rating": 39.10617,
-   "id": "43_KIX.jpg"
+   "rating": 39.106174
  },
  {
    "id": "74",
@@ -1476,8 +1403,7 @@ var cereals_data = [
    "shelf": 2,
    "weight": 1,
    "cups": 1,
-   "rating": 27.75330,
-   "id": "43_KIX.jpg"
+   "rating": 27.753301
  },
  {
    "id": "75",
@@ -1496,8 +1422,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.67,
-   "rating": 49.78744,
-   "id": "43_KIX.jpg"
+   "rating": 49.787445
  },
  {
    "id": "76",
@@ -1516,8 +1441,7 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 1,
-   "rating": 51.59219,
-   "id": "43_KIX.jpg"
+   "rating": 51.592193
  },
  {
    "id": "77",
@@ -1536,7 +1460,6 @@ var cereals_data = [
    "shelf": 1,
    "weight": 1,
    "cups": 0.75,
-   "rating": 36.18755,
-   "id": "43_KIX.jpg"
+   "rating": 36.187559
  }
 ]
