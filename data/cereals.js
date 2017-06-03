@@ -1,5 +1,6 @@
 var cereals_data = [
  {
+   "id": "1",
    "name": "100% Bran",
    "mfr": "N",
    "type": "C",
@@ -18,6 +19,7 @@ var cereals_data = [
    "rating": 68.402973
  },
  {
+   "id": "2",
    "name": "100% Natural Bran",
    "mfr": "Q",
    "type": "C",
@@ -36,6 +38,7 @@ var cereals_data = [
    "rating": 33.983679
  },
  {
+   "id": "3",
    "name": "All-Bran",
    "mfr": "K",
    "type": "C",
@@ -54,6 +57,7 @@ var cereals_data = [
    "rating": 59.425505
  },
  {
+   "id": "4",
    "name": "All-Bran with Extra Fiber",
    "mfr": "K",
    "type": "C",
@@ -72,6 +76,7 @@ var cereals_data = [
    "rating": 93.704912
  },
  {
+   "id": "5",
    "name": "Almond Delight",
    "mfr": "R",
    "type": "C",
@@ -90,6 +95,7 @@ var cereals_data = [
    "rating": 34.384843
  },
  {
+   "id": "6",
    "name": "Apple Cinnamon Cheerios",
    "mfr": "G",
    "type": "C",
@@ -108,6 +114,7 @@ var cereals_data = [
    "rating": 29.509541
  },
  {
+   "id": "7",
    "name": "Apple Jacks",
    "mfr": "K",
    "type": "C",
@@ -126,6 +133,7 @@ var cereals_data = [
    "rating": 33.174094
  },
  {
+   "id": "8",
    "name": "Basic 4",
    "mfr": "G",
    "type": "C",
@@ -144,6 +152,7 @@ var cereals_data = [
    "rating": 37.038562
  },
  {
+   "id": "9",
    "name": "Bran Chex",
    "mfr": "R",
    "type": "C",
@@ -162,6 +171,7 @@ var cereals_data = [
    "rating": 49.120253
  },
  {
+   "id": "10",
    "name": "Bran Flakes",
    "mfr": "P",
    "type": "C",
@@ -180,6 +190,7 @@ var cereals_data = [
    "rating": 53.313813
  },
  {
+   "id": "11",
    "name": "Cap'n'Crunch",
    "mfr": "Q",
    "type": "C",
@@ -198,6 +209,7 @@ var cereals_data = [
    "rating": 18.042851
  },
  {
+   "id": "12",
    "name": "Cheerios",
    "mfr": "G",
    "type": "C",
@@ -216,6 +228,7 @@ var cereals_data = [
    "rating": 50.764999
  },
  {
+   "id": "13",
    "name": "Cinnamon Toast Crunch",
    "mfr": "G",
    "type": "C",
@@ -234,6 +247,7 @@ var cereals_data = [
    "rating": 19.823573
  },
  {
+   "id": "14",
    "name": "Clusters",
    "mfr": "G",
    "type": "C",
@@ -252,6 +266,7 @@ var cereals_data = [
    "rating": 40.400208
  },
  {
+   "id": "15",
    "name": "Cocoa Puffs",
    "mfr": "G",
    "type": "C",
@@ -270,6 +285,7 @@ var cereals_data = [
    "rating": 22.736446
  },
  {
+   "id": "16",
    "name": "Corn Chex",
    "mfr": "R",
    "type": "C",
@@ -288,6 +304,7 @@ var cereals_data = [
    "rating": 41.445019
  },
  {
+   "id": "17",
    "name": "Corn Flakes",
    "mfr": "K",
    "type": "C",
@@ -306,6 +323,7 @@ var cereals_data = [
    "rating": 45.863324
  },
  {
+   "id": "18",
    "name": "Corn Pops",
    "mfr": "K",
    "type": "C",
@@ -324,6 +342,7 @@ var cereals_data = [
    "rating": 35.782791
  },
  {
+   "id": "19",
    "name": "Count Chocula",
    "mfr": "G",
    "type": "C",
@@ -342,6 +361,7 @@ var cereals_data = [
    "rating": 22.396513
  },
  {
+   "id": "20",
    "name": "Cracklin' Oat Bran",
    "mfr": "K",
    "type": "C",
@@ -360,6 +380,7 @@ var cereals_data = [
    "rating": 40.448772
  },
  {
+   "id": "21",
    "name": "Cream of Wheat (Quick)",
    "mfr": "N",
    "type": "H",
@@ -378,6 +399,7 @@ var cereals_data = [
    "rating": 64.533816
  },
  {
+   "id": "22",
    "name": "Crispix",
    "mfr": "K",
    "type": "C",
@@ -396,6 +418,7 @@ var cereals_data = [
    "rating": 46.895644
  },
  {
+   "id": "23",
    "name": "Crispy Wheat & Raisins",
    "mfr": "G",
    "type": "C",
@@ -414,6 +437,7 @@ var cereals_data = [
    "rating": 36.176196
  },
  {
+   "id": "24",
    "name": "Double Chex",
    "mfr": "R",
    "type": "C",
@@ -432,6 +456,7 @@ var cereals_data = [
    "rating": 44.330856
  },
  {
+   "id": "25",
    "name": "Froot Loops",
    "mfr": "K",
    "type": "C",
@@ -450,6 +475,7 @@ var cereals_data = [
    "rating": 32.207582
  },
  {
+   "id": "26",
    "name": "Frosted Flakes",
    "mfr": "K",
    "type": "C",
@@ -468,6 +494,7 @@ var cereals_data = [
    "rating": 31.435973
  },
  {
+   "id": "27",
    "name": "Frosted Mini-Wheats",
    "mfr": "K",
    "type": "C",
@@ -486,6 +513,7 @@ var cereals_data = [
    "rating": 58.345141
  },
  {
+   "id": "28",
    "name": "Fruit & Fibre Dates, Walnuts, and Oats",
    "mfr": "P",
    "type": "C",
@@ -504,6 +532,7 @@ var cereals_data = [
    "rating": 40.917047
  },
  {
+   "id": "29",
    "name": "Fruitful Bran",
    "mfr": "K",
    "type": "C",
@@ -522,6 +551,7 @@ var cereals_data = [
    "rating": 41.015492
  },
  {
+   "id": "30",
    "name": "Fruity Pebbles",
    "mfr": "P",
    "type": "C",
@@ -540,6 +570,7 @@ var cereals_data = [
    "rating": 28.025765
  },
  {
+   "id": "31",
    "name": "Golden Crisp",
    "mfr": "P",
    "type": "C",
@@ -558,6 +589,7 @@ var cereals_data = [
    "rating": 35.252444
  },
  {
+   "id": "32",
    "name": "Golden Grahams",
    "mfr": "G",
    "type": "C",
@@ -576,6 +608,7 @@ var cereals_data = [
    "rating": 23.804043
  },
  {
+   "id": "33",
    "name": "Grape Nuts Flakes",
    "mfr": "P",
    "type": "C",
@@ -594,6 +627,7 @@ var cereals_data = [
    "rating": 52.076897
  },
  {
+   "id": "34",
    "name": "Grape-Nuts",
    "mfr": "P",
    "type": "C",
@@ -612,6 +646,7 @@ var cereals_data = [
    "rating": 53.371007
  },
  {
+   "id": "35",
    "name": "Great Grains Pecan",
    "mfr": "P",
    "type": "C",
@@ -630,6 +665,7 @@ var cereals_data = [
    "rating": 45.811716
  },
  {
+   "id": "36",
    "name": "Honey Graham Ohs",
    "mfr": "Q",
    "type": "C",
@@ -648,6 +684,7 @@ var cereals_data = [
    "rating": 21.871292
  },
  {
+   "id": "37",
    "name": "Honey Nut Cheerios",
    "mfr": "G",
    "type": "C",
@@ -666,6 +703,7 @@ var cereals_data = [
    "rating": 31.072217
  },
  {
+   "id": "38",
    "name": "Honey-comb",
    "mfr": "P",
    "type": "C",
@@ -684,6 +722,7 @@ var cereals_data = [
    "rating": 28.742414
  },
  {
+   "id": "39",
    "name": "Just Right Crunchy  Nuggets",
    "mfr": "K",
    "type": "C",
@@ -702,6 +741,7 @@ var cereals_data = [
    "rating": 36.523683
  },
  {
+   "id": "40",
    "name": "Just Right Fruit & Nut",
    "mfr": "K",
    "type": "C",
@@ -720,6 +760,7 @@ var cereals_data = [
    "rating": 36.471512
  },
  {
+   "id": "41",
    "name": "Kix",
    "mfr": "G",
    "type": "C",
@@ -738,6 +779,7 @@ var cereals_data = [
    "rating": 39.241114
  },
  {
+   "id": "42",
    "name": "Life",
    "mfr": "Q",
    "type": "C",
@@ -756,6 +798,7 @@ var cereals_data = [
    "rating": 45.328074
  },
  {
+   "id": "43",
    "name": "Lucky Charms",
    "mfr": "G",
    "type": "C",
@@ -774,6 +817,7 @@ var cereals_data = [
    "rating": 26.734515
  },
  {
+   "id": "44",
    "name": "Maypo",
    "mfr": "A",
    "type": "H",
@@ -792,6 +836,7 @@ var cereals_data = [
    "rating": 54.850917
  },
  {
+   "id": "45",
    "name": "Muesli Raisins, Dates, & Almonds",
    "mfr": "R",
    "type": "C",
@@ -810,6 +855,7 @@ var cereals_data = [
    "rating": 37.136863
  },
  {
+   "id": "46",
    "name": "Muesli Raisins, Peaches, & Pecans",
    "mfr": "R",
    "type": "C",
@@ -828,6 +874,7 @@ var cereals_data = [
    "rating": 34.139765
  },
  {
+   "id": "47",
    "name": "Mueslix Crispy Blend",
    "mfr": "K",
    "type": "C",
@@ -846,6 +893,7 @@ var cereals_data = [
    "rating": 30.313351
  },
  {
+   "id": "48",
    "name": "Multi-Grain Cheerios",
    "mfr": "G",
    "type": "C",
@@ -864,6 +912,7 @@ var cereals_data = [
    "rating": 40.105965
  },
  {
+   "id": "49",
    "name": "Nut&Honey Crunch",
    "mfr": "K",
    "type": "C",
@@ -882,6 +931,7 @@ var cereals_data = [
    "rating": 29.924285
  },
  {
+   "id": "50",
    "name": "Nutri-Grain Almond-Raisin",
    "mfr": "K",
    "type": "C",
@@ -900,6 +950,7 @@ var cereals_data = [
    "rating": 40.69232
  },
  {
+   "id": "51",
    "name": "Nutri-grain Wheat",
    "mfr": "K",
    "type": "C",
@@ -918,6 +969,7 @@ var cereals_data = [
    "rating": 59.642837
  },
  {
+   "id": "52",
    "name": "Oatmeal Raisin Crisp",
    "mfr": "G",
    "type": "C",
@@ -936,6 +988,7 @@ var cereals_data = [
    "rating": 30.450843
  },
  {
+   "id": "53",
    "name": "Post Nat. Raisin Bran",
    "mfr": "P",
    "type": "C",
@@ -954,6 +1007,7 @@ var cereals_data = [
    "rating": 37.840594
  },
  {
+   "id": "54",
    "name": "Product 19",
    "mfr": "K",
    "type": "C",
@@ -972,6 +1026,7 @@ var cereals_data = [
    "rating": 41.50354
  },
  {
+   "id": "55",
    "name": "Puffed Rice",
    "mfr": "Q",
    "type": "C",
@@ -990,6 +1045,7 @@ var cereals_data = [
    "rating": 60.756112
  },
  {
+   "id": "56",
    "name": "Puffed Wheat",
    "mfr": "Q",
    "type": "C",
@@ -1008,6 +1064,7 @@ var cereals_data = [
    "rating": 63.005645
  },
  {
+   "id": "57",
    "name": "Quaker Oat Squares",
    "mfr": "Q",
    "type": "C",
@@ -1026,6 +1083,7 @@ var cereals_data = [
    "rating": 49.511874
  },
  {
+   "id": "58",
    "name": "Quaker Oatmeal",
    "mfr": "Q",
    "type": "H",
@@ -1044,6 +1102,7 @@ var cereals_data = [
    "rating": 50.828392
  },
  {
+   "id": "59",
    "name": "Raisin Bran",
    "mfr": "K",
    "type": "C",
@@ -1062,6 +1121,7 @@ var cereals_data = [
    "rating": 39.259197
  },
  {
+   "id": "60",
    "name": "Raisin Nut Bran",
    "mfr": "G",
    "type": "C",
@@ -1080,6 +1140,7 @@ var cereals_data = [
    "rating": 39.7034
  },
  {
+   "id": "61",
    "name": "Raisin Squares",
    "mfr": "K",
    "type": "C",
@@ -1098,6 +1159,7 @@ var cereals_data = [
    "rating": 55.333142
  },
  {
+   "id": "62",
    "name": "Rice Chex",
    "mfr": "R",
    "type": "C",
@@ -1116,6 +1178,7 @@ var cereals_data = [
    "rating": 41.998933
  },
  {
+   "id": "63",
    "name": "Rice Krispies",
    "mfr": "K",
    "type": "C",
@@ -1134,6 +1197,7 @@ var cereals_data = [
    "rating": 40.560159
  },
  {
+   "id": "64",
    "name": "Shredded Wheat",
    "mfr": "N",
    "type": "C",
@@ -1152,6 +1216,7 @@ var cereals_data = [
    "rating": 68.235885
  },
  {
+   "id": "65",
    "name": "Shredded Wheat 'n'Bran",
    "mfr": "N",
    "type": "C",
@@ -1170,6 +1235,7 @@ var cereals_data = [
    "rating": 74.472949
  },
  {
+   "id": "66",
    "name": "Shredded Wheat spoon size",
    "mfr": "N",
    "type": "C",
@@ -1188,6 +1254,7 @@ var cereals_data = [
    "rating": 72.801787
  },
  {
+   "id": "67",
    "name": "Smacks",
    "mfr": "K",
    "type": "C",
@@ -1206,6 +1273,7 @@ var cereals_data = [
    "rating": 31.230054
  },
  {
+   "id": "68",
    "name": "Special K",
    "mfr": "K",
    "type": "C",
@@ -1224,6 +1292,7 @@ var cereals_data = [
    "rating": 53.131324
  },
  {
+   "id": "69",
    "name": "Strawberry Fruit Wheats",
    "mfr": "N",
    "type": "C",
@@ -1242,6 +1311,7 @@ var cereals_data = [
    "rating": 59.363993
  },
  {
+   "id": "70",
    "name": "Total Corn Flakes",
    "mfr": "G",
    "type": "C",
@@ -1260,6 +1330,7 @@ var cereals_data = [
    "rating": 38.839746
  },
  {
+   "id": "71",
    "name": "Total Raisin Bran",
    "mfr": "G",
    "type": "C",
@@ -1278,6 +1349,7 @@ var cereals_data = [
    "rating": 28.592785
  },
  {
+   "id": "72",
    "name": "Total Whole Grain",
    "mfr": "G",
    "type": "C",
@@ -1296,6 +1368,7 @@ var cereals_data = [
    "rating": 46.658844
  },
  {
+   "id": "73",
    "name": "Triples",
    "mfr": "G",
    "type": "C",
@@ -1314,6 +1387,7 @@ var cereals_data = [
    "rating": 39.106174
  },
  {
+   "id": "74",
    "name": "Trix",
    "mfr": "G",
    "type": "C",
@@ -1332,6 +1406,7 @@ var cereals_data = [
    "rating": 27.753301
  },
  {
+   "id": "75",
    "name": "Wheat Chex",
    "mfr": "R",
    "type": "C",
@@ -1350,6 +1425,7 @@ var cereals_data = [
    "rating": 49.787445
  },
  {
+   "id": "76",
    "name": "Wheaties",
    "mfr": "G",
    "type": "C",
@@ -1368,6 +1444,7 @@ var cereals_data = [
    "rating": 51.592193
  },
  {
+   "id": "77",
    "name": "Wheaties Honey Gold",
    "mfr": "G",
    "type": "C",

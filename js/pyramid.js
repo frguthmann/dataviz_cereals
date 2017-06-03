@@ -7,9 +7,9 @@
 */
 var pyramid = {
   modelRows: [
-    [{source: "images/allbran.jpg"}],
-    [{source: "images/100-bran-1.jpg"},{source: "images/43_KIX.jpg"},{source: "images/46_MAYPO.jpg"},{source: "images/56_PRODUCT_19.jpg"},{source: "images/allbran.jpg"}],
-    [{source: "images/clusters.jpg"},{source: "images/57_PUFFED_RICE.jpg"},{source: "images/Total_Corn_Flakes.jpg"},{source: "images/Wheat_Chex.jpg"},{source: "images/allbranbuds.jpg"}, {source: "images/allbranfibreplus.jpg"},{source: "images/almonddelight.jpg"},{source: "images/appljacks.jpg"},{source: "images/basic4.jpg"},{source: "images/branchex.jpg"}]
+    [{source: "images/3.jpg"}],
+    [{source: "images/1.jpg"},{source: "images/41.jpg"},{source: "images/44.jpg"},{source: "images/54.jpg"},{source: "images/2.jpg"}],
+    [{source: "images/14.jpg"},{source: "images/55.jpg"},{source: "images/70.jpg"},{source: "images/75.jpg"},{source: "images/2.jpg"}, {source: "images/4.jpg"},{source: "images/5.jpg"},{source: "images/7.jpg"},{source: "images/8.jpg"},{source: "images/9.jpg"}]
   ],
   viewRows: [
   ["DOM_ELEMENT"],
