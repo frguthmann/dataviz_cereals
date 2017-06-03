@@ -1,0 +1,23 @@
+/* Align row with the others */
+#row0{
+	position: relative; 
+	left: 152px;
+}
+
+/* Align row with the others */
+#row1{
+	position: relative; 
+	left: 76px;
+}
+
+/* Display list horizontally */
+li{
+	display:inline;
+}
+
+/* Make all pictures the same size and align text to the middle with them */
+.pyramidPicture{
+	width:72px;
+	height:114px;
+	vertical-align:middle;
+}
