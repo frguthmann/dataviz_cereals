@@ -20,6 +20,7 @@ var pyramid = {
 };
 
 console.log(pyramid);
+console.log(cereals_data);
 
 /*  Lets fill the viewRows section of the pyramid with something better than "DOM_ELEMENT"
     Plus we change the pictures on the fly so that we don't always have the same one everywhere
