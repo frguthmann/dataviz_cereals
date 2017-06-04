@@ -1,25 +1,32 @@
-/* Align row with the others */
-#row0{
-	position: relative;
-	left: 152px;
+/* Make all pictures the same size and align text to the middle with them */
+.pyramidPicture{
+	min-width:50px;
+	height:140px;
+	vertical-align:middle;
+	object-fit: fit;
 }
 
-/* Align row with the others */
-#row1{
+.buttonpyramid{
+	width:20px;
+	height:20px;
+}
+
+#pyramid{
 	position: relative;
-	left: 76px;
+	width: 70%;
+	height: 100%;
+    float: left;
+}
+
+#pyramid ul{
+	width:100%;
+	margin: 0;
+	padding: 0;
 }
 
 /* Display list horizontally */
-li{
+#pyramid li{
 	display:inline;
-}
-
-/* Make all pictures the same size and align text to the middle with them */
-.pyramidPicture{
-	width:72px;
-	height:114px;
-	vertical-align:middle;
 }
 
 .conteneur{
@@ -28,9 +35,7 @@ li{
 	justify-content: space-between;
 }
 
-h1{
-	color: white;
-}
+
 header{
 	text-align: center;
 	background-image: url('../images/top_fond.jpeg');
@@ -38,16 +43,17 @@ header{
 	padding-top: 10px;
 	padding-bottom: 30px;
 	border: solid 3px #f8f69d;
+	color: #ffffff;
 }
+
 body{
 	background-color: #faf8b5;
 }
 
 #criteres{
+	position: relative;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
 	background-color: #f8f69d;
-}
-#pyramid{
-	margin-left: 300px;
 }
