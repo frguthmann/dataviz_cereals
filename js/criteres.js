@@ -1,20 +1,20 @@
-int getSucre(){
+function getSucre(){
   var s = document.getElementById("sucre");
-  alert(s.value);
+  console.log(s.value);
   return(s.value);
 }
 
-int getSale(){
+function getSale(){
   var s = document.getElementById("sale");
   return(s.value);
 }
 
-int getGraisse(){
+function getGraisse(){
   var s = document.getElementById("graisse");
   return(s.value);
 }
 
-int getCalories(){
+function getCalories(){
   var s = document.getElementById("calories");
   return(s.value);
 }
