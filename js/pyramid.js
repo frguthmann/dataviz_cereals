@@ -64,14 +64,14 @@ function firstPyramidSetup(){
 
 /*  This function changes the pictures displayed on the page by rotating them by one following the modeRows
     Row: wich row of the pyramid is supposed to be changed
-    Direction: +1 for left and -1 for right. (A bit counter intuitive I know) 
+    Direction: +1 for left and -1 for right. (A bit counter intuitive I know)
 */
 function rotateRow(row, direction){
-  
+
   // What were we displaying before and where are we going
   var startIdx = pyramid.idxModel[row] + direction;
   var modelRowLength = pyramid.modelRows[row].length;
-  
+
   // Solves problem of negative index
   if(startIdx == -1){
     startIdx = modelRowLength - 1;

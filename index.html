@@ -1,42 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
   <title>Cereals Killer</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="data/cereals.js"></script>
 
 </head>
 <body>
+  <nav>
+  </nav>
+  <header>
+    <h1> Bien choisir ses céréales </h1>
+  </header>
+  <span class = "conteneur">
+    <div id = "pyramid">
+      <ul id="row0"> <!-- 72 * 2 + 4 * 2 px margin -->
+        <li> <button type="button" onclick="rotateRow(0,1);"><</button> </li>
+        <li> <img id="r0im0" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <button type="button" onclick="rotateRow(0,-1);">></button> </li>
+      </ul>
+      <ul id="row1"> <!-- 72 + 4 px margin -->
+        <li> <button type="button" onclick="rotateRow(1,1);"><</button> </li>
+        <li> <img id="r1im0" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r1im1" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r1im2" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <button type="button" onclick="rotateRow(1,-1);">></button> </li>
+      </ul>
+      <ul id="row2">
+        <li> <button type="button" onclick="rotateRow(2,1);"><</button> </li>
+        <li> <img id="r2im0" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r2im1" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r2im2" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r2im3" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <img id="r2im4" src="images/1.jpg" class = "pyramidPicture"></li>
+        <li> <button type="button" onclick="rotateRow(2,-1);">></button> </li>
+      </ul>
+    </div>
 
-  <h1> WELCOME TO THIS DATAVIZ PROJECT </h1>
-  <br><br>
+    <section id = "criteres">
+      <p> Choisissez vos critères </p>
+      <label> Sucre
+        <input id ="sucre" type = "range" step = 1 min = 1 max = 90 >
+      </label>
+      <label> Salé
+        <input id = "sale" type = "range" step = 1 min = 1 max = 90>
+      </label>
+      <label> Graisse
+        <input id = "graisse" type = "range" step = 1 min = 1 max = 90>
+      </label>
+      <label> Calories
+        <input id = "calories" type = "range" step = 1 min = 1 max = 90>
+      </label>
 
+    </section>
 
-  <ul id="row0"> <!-- 72 * 2 + 4 * 2 px margin -->
-    <li> <button type="button" onclick="rotateRow(0,1);"><</button> </li>
-    <li> <img id="r0im0" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <button type="button" onclick="rotateRow(0,-1);">></button> </li>
-  </ul>  
-  <ul id="row1"> <!-- 72 + 4 px margin -->
-    <li> <button type="button" onclick="rotateRow(1,1);"><</button> </li>
-    <li> <img id="r1im0" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r1im1" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r1im2" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <button type="button" onclick="rotateRow(1,-1);">></button> </li>
-  </ul>  
-  <ul id="row2">
-    <li> <button type="button" onclick="rotateRow(2,1);"><</button> </li>
-    <li> <img id="r2im0" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r2im1" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r2im2" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r2im3" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <img id="r2im4" src="images/1.jpg" class = "pyramidPicture"></li>
-    <li> <button type="button" onclick="rotateRow(2,-1);">></button> </li>
-  </ul>  
+  </span>
+
 
 </body>
 
   <script src="js/pyramid.js"></script>
+  <script>
+
+  function getSucre(){
+    var s = document.getElementById("sucre");
+    console.log(s.value);
+    return(s.value);
+  }
+
+  function getSale(){
+    var s = document.getElementById("sale");
+    return(s.value);
+  }
+
+  function getGraisse(){
+    var s = document.getElementById("graisse");
+    return(s.value);
+  }
+
+  function getCalories(){
+    var s = document.getElementById("calories");
+    return(s.value);
+  }
+
+  </script>
 
 </html>
