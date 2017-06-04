@@ -18,6 +18,8 @@ var pyramid = {
 console.log(pyramid);
 console.log(cereals_data);
 
+var treeheight=0;
+
 loadData();
 firstPyramidSetup();
 
@@ -51,7 +53,8 @@ function firstPyramidSetup(){
   /*  Lets fill the viewRows section of the pyramid with the DOM elements that are the pictures of it
       Plus we change the pictures on the fly so that we don't always have the same one everywhere
   */
-	var tree = document.getElementById("pyramid");
+  var tree = document.getElementById("pyramid");
+  treeheight=tree.clientHeight;
 	for(r=0; r<pyramid.modelRows.length; r++){
 		
 		//Creation ligne
@@ -80,15 +83,20 @@ function firstPyramidSetup(){
     for(im=0; im<rowsViewSize[r]; im++){
 		console.log("img = "+im)
 		var HTMLli = document.createElement("li");
-		var cell = document.createElement("img");
+		var cell = document.createElement("span");
+		var image = document.createElement("img");
 		cell.id = "r" + r + "im" + im;
-		cell.src = pyramid.modelRows[r][im].source;
+		image.src = pyramid.modelRows[r][im].source;
+		image.setAttribute("class", "pyramidImage");
+		cell.appendChild(image);
 		cell.setAttribute("class", "pyramidPicture");
-		cell.setAttribute("style","width:"+100/(pyramid.modelRows.length*2)+"%;")
+		var width = 80/(pyramid.modelRows.length*2);
+		//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
+		cell.setAttribute("style","width:"+width+"%;")
 		console.log(cell)
 		HTMLli.appendChild(cell);
 		HTMLrow.appendChild(HTMLli);
-		tempRow.push(cell);
+		tempRow.push(image);
     }
 	
     pyramid.viewRows.push(tempRow);
@@ -112,6 +120,7 @@ function firstPyramidSetup(){
     Direction: +1 for left and -1 for right. (A bit counter intuitive I know) 
 */
 function rotateRow(row, direction){
+	console.log("rotate")
   // What were we displaying before and where are we going
   var startIdx = pyramid.idxModel[row] + direction;
   var modelRowLength = pyramid.modelRows[row].length;
@@ -128,4 +137,9 @@ function rotateRow(row, direction){
   }
   // Don't forget to update the pyramid: we moved through the model
   pyramid.idxModel[row] = startIdx % modelRowLength;
+}
+
+window.onresize = function(event) {
+	treeheight=document.documentElement.clientHeight;
+	console.log(treeheight)
 }
