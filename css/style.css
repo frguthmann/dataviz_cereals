@@ -1,12 +1,12 @@
 /* Align row with the others */
 #row0{
-	position: relative; 
+	position: relative;
 	left: 152px;
 }
 
 /* Align row with the others */
 #row1{
-	position: relative; 
+	position: relative;
 	left: 76px;
 }
 
@@ -20,4 +20,34 @@ li{
 	width:72px;
 	height:114px;
 	vertical-align:middle;
+}
+
+.conteneur{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+h1{
+	color: white;
+}
+header{
+	text-align: center;
+	background-image: url('../images/top_fond.jpeg');
+	background-position: top;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	border: solid 3px #f8f69d;
+}
+body{
+	background-color: #faf8b5;
+}
+
+#criteres{
+	display: flex;
+	flex-direction: column;
+	background-color: #f8f69d;
+}
+#pyramid{
+	margin-left: 300px;
 }
