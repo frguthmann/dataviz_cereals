@@ -1,6 +1,6 @@
 // Constants:
-var rowsModelSize = [1,5,11,21,39];
-var rowsViewSize = [1,3,5,7,9];
+var rowsModelSize = [3,10,20,44];
+var rowsViewSize = [1,3,5,7];
 
 /*  The pyramid contains three thing:
     Paths to the pictures it might display: modelRows. There are more than actually displayed
@@ -82,21 +82,7 @@ function firstPyramidSetup(){
 	//Remplissage de la ligne
     for(im=0; im<rowsViewSize[r]; im++){
 		console.log("img = "+im)
-		var HTMLli = document.createElement("li");
-		var cell = document.createElement("span");
-		var image = document.createElement("img");
-		cell.id = "r" + r + "im" + im;
-		image.src = pyramid.modelRows[r][im].source;
-		image.setAttribute("class", "pyramidImage");
-		cell.appendChild(image);
-		cell.setAttribute("class", "pyramidPicture");
-		var width = 80/(pyramid.modelRows.length*2);
-		//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
-		cell.setAttribute("style","width:"+width+"%;")
-		console.log(cell)
-		HTMLli.appendChild(cell);
-		HTMLrow.appendChild(HTMLli);
-		tempRow.push(image);
+		tempRow.push(createCell(r,im,HTMLrow));
     }
 	
     pyramid.viewRows.push(tempRow);
@@ -114,6 +100,36 @@ function firstPyramidSetup(){
   }
 }
 
+//Ajoute un paquet de céréale à la ligne donnée
+function createCell(r,im,row){
+	var HTMLli = document.createElement("li");
+	
+	var image = document.createElement("img");
+	image.src = pyramid.modelRows[r][im].source;
+	image.setAttribute("class", "pyramidImage");
+	
+	var txt = document.createElement("span");
+	txt.innerHTML = "Description ici";
+	
+	var link = document.createElement("a");
+	link.setAttribute("href", "#");
+	link.setAttribute("class", "description");
+	link.appendChild(image);
+	link.appendChild(txt);
+
+	var cell = document.createElement("span");
+	cell.id = "r" + r + "im" + im;
+	cell.appendChild(link);
+	cell.setAttribute("class", "pyramidPicture");
+	var width = 80/(pyramid.modelRows.length*2);
+	//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
+	cell.setAttribute("style","width:"+width+"%;")
+	
+	console.log(cell)
+	HTMLli.appendChild(cell);
+	row.appendChild(HTMLli);
+	return image;
+}
 
 /*  This function changes the pictures displayed on the page by rotating them by one following the modeRows
     Row: wich row of the pyramid is supposed to be changed

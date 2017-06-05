@@ -1,8 +1,18 @@
 /* Make all pictures the same size and align text to the middle with them */
 .pyramidPicture{
-	height:16vh;
+	height:20vh;
+	min-width:50px;
+	min-height:60px;
 	vertical-align:middle;
 	display:inline-block;
+	
+	transform:scale(1);
+	transition:all .25s;
+}
+
+.pyramidPicture:hover,.pyramidPicture:focus{
+	transform:scale(1.2);
+	z-index:1000
 }
 
 .pyramidImage{
@@ -17,9 +27,11 @@
 }
 
 #pyramid{
-	min-width:500px;
+	margin: 5px;
+	padding: 0;
+	min-width:400px;
 	position: relative;
-	width: 70%;
+	width: 80%;
     float: left;
 }
 
@@ -58,9 +70,64 @@ body{
 }
 
 #criteres{
-	position: relative;
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	background-color: #f8f69d;
+		position: relative;
+		float:left;
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		background-color: #f8f69d;
+	}
+	
+a.description span{
+    position:absolute;
+	margin-top:23px;
+    margin-left:10px;
+	color: #ffffff;
+	background-image: url('../images/top_fond.jpeg');
+	background-position: top;
+	padding:15px;
+	border-radius:3px;
+	box-shadow:0 0 5px rgba(0,0,0,.7);
+	transform:scale(0) rotate(-12deg);
+	transition:all .25s;
+	opacity:0;
+}
+
+a.description:hover span, a.description:focus span{
+    transform:scale(1) rotate(0);
+	opacity:1;     
+}
+
+
+@media screen and (max-width: 650px) {
+    
+	.conteneur{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	#pyramid{
+		width: 100%;
+	}
+	
+	#criteres{
+		width: 100%;
+		text-align: center;
+	}
+	
+	a.description span{
+		font-size: 50%;
+		padding:5px;
+		border-radius:3px;
+	}
+	
+}
+
+@media screen and (max-height: 500px) {
+    
+	header{
+		font-size: 50%;
+	}
+	
 }
