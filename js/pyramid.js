@@ -70,6 +70,7 @@ function firstPyramidSetup(){
 			var li = document.createElement("li");
 			var button = document.createElement("button");
 			button.type = "button";
+			button.innerHTML = "<";
 			button.setAttribute("class","buttonpyramid");
 			button.setAttribute("onclick","rotateRow("+r+",1);")
 			li.appendChild(button);
@@ -93,6 +94,7 @@ function firstPyramidSetup(){
 		var button = document.createElement("button");
 		button.setAttribute("onclick","rotateRow("+r+",-1);")
 		button.type = "button";
+		button.innerHTML = ">";
 		button.setAttribute("class","buttonpyramid");
 		li.appendChild(button);
 		HTMLrow.appendChild(li);
