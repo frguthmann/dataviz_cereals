@@ -133,11 +133,17 @@ a.description:hover span, a.description:focus span{
 
 }
 
+
+
 input[type=range] {
 -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
 width: 300px; /* Specific width is required for Firefox. */
 height:10px;
 background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-moz-range-track{
+	visibility: hidden;
 }
 
 input[type=range]::-webkit-slider-thumb { /**/
@@ -168,7 +174,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .red{
-	width: 300px;
+	width: 320px;
 	background: red;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
