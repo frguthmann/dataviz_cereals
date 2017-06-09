@@ -73,7 +73,7 @@ body{
 #criteres{
 		position: relative;
 		float:left;
-		width: 20%;
+		width: 30%;
 		display: flex;
 		flex-direction: column;
 		background-color: #f8f69d;
@@ -154,7 +154,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .green{
-	width: 300px;
+	width: 100px;
 	background: green;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
@@ -168,7 +168,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .red{
-	width: 100px;
+	width: 300px;
 	background: red;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
