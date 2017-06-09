@@ -56,15 +56,15 @@ function firstPyramidSetup(){
   var tree = document.getElementById("pyramid");
   treeheight=tree.clientHeight;
 	for(r=0; r<pyramid.modelRows.length; r++){
-		
+
 		//Creation ligne
 		var HTMLrow = document.createElement("ul");
 		tree.appendChild(HTMLrow);
-		HTMLrow.setAttribute("style","margin-left: auto;margin-right: auto;text-align: center;")
-		HTMLrow.setAttribute("id","PyramidRow"+r)
-		
-		
-		
+		HTMLrow.setAttribute("style","margin-left: auto;margin-right: auto;text-align: center;");
+		HTMLrow.setAttribute("id","PyramidRow"+r);
+
+
+
 		//Creation button gauche
 		if(rowsViewSize[r]!==1){
 			var li = document.createElement("li");
@@ -76,18 +76,18 @@ function firstPyramidSetup(){
 			li.appendChild(button);
 			HTMLrow.appendChild(li);
 		}
-		
-		console.log("r = "+r)
+
+		//console.log("r = "+r)
 		var tempRow = [];
-		
+
 	//Remplissage de la ligne
     for(im=0; im<rowsViewSize[r]; im++){
-		console.log("img = "+im)
+		//console.log("img = "+im)
 		tempRow.push(createCell(r,im,HTMLrow));
     }
-	
+
     pyramid.viewRows.push(tempRow);
-	
+
 	//Creation du bouton droit
 	if(rowsViewSize[r]!==1){
 		var li = document.createElement("li");
@@ -104,15 +104,19 @@ function firstPyramidSetup(){
 
 //Ajoute un paquet de céréale à la ligne donnée
 function createCell(r,im,row){
+
 	var HTMLli = document.createElement("li");
-	
+
 	var image = document.createElement("img");
 	image.src = pyramid.modelRows[r][im].source;
 	image.setAttribute("class", "pyramidImage");
-	
+
+    var globalDataId = parseInt(image.src.match(/images\/(\d+)/)[1]) - 1;
 	var txt = document.createElement("span");
-	txt.innerHTML = "Description ici";
-	
+	txt.innerHTML = cereals_data[globalDataId].name;
+
+    //image.setAttribute("id",globalDataId);
+
 	var link = document.createElement("a");
 	link.setAttribute("href", "#");
 	link.setAttribute("class", "description");
@@ -126,8 +130,8 @@ function createCell(r,im,row){
 	var width = 80/(pyramid.modelRows.length*2);
 	//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
 	cell.setAttribute("style","width:"+width+"%;")
-	
-	console.log(cell)
+
+	//console.log(cell)
 	HTMLli.appendChild(cell);
 	row.appendChild(HTMLli);
 	return image;
@@ -135,14 +139,14 @@ function createCell(r,im,row){
 
 /*  This function changes the pictures displayed on the page by rotating them by one following the modeRows
     Row: wich row of the pyramid is supposed to be changed
-    Direction: +1 for left and -1 for right. (A bit counter intuitive I know) 
+    Direction: +1 for left and -1 for right. (A bit counter intuitive I know)
 */
 function rotateRow(row, direction){
 	console.log("rotate")
   // What were we displaying before and where are we going
   var startIdx = pyramid.idxModel[row] + direction;
   var modelRowLength = pyramid.modelRows[row].length;
-  
+
   // Solves problem of negative index
   if(startIdx == -1){
     startIdx = modelRowLength - 1;
@@ -161,3 +165,20 @@ window.onresize = function(event) {
 	treeheight=document.documentElement.clientHeight;
 	console.log(treeheight)
 }
+
+function displayDescription(obj){
+    console.log(obj + " over");
+}
+
+function hideDescription(obj){
+    console.log(obj + " not over");
+}
+
+// Détection du mouseover
+$( ".pyramidPicture" )
+  .mouseover(function() {
+    displayDescription(this);
+  })
+  .mouseout(function() {
+    hideDescription(this);
+  });
