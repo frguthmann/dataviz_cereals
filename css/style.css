@@ -94,7 +94,7 @@ a.description span{
 	opacity:0;
 }
 
-a.description:hover span, a.description:focus span{
+a.description:hover span{ /*a.description:focus span*/
     transform:scale(1) rotate(0);
 	opacity:1;
 }
