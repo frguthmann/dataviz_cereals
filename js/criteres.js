@@ -19,11 +19,20 @@ function getCalories(){
   return(s.value);
 }
 
+var draggedElement = null;
+document.addEventListener('dragstart',function(e){
+  draggedElement = e.target;
+});
+
 var elements = document.getElementsByClassName("dropper");
 for(var i = 0; i < elements.length; i ++){
   var dropper = elements[i];
   dropper.addEventListener('drop',function(e){
     e.preventDefault();
+    dropper.append(draggedElement);
+    
+    console.log(draggedElement);
+
   });
   dropper.addEventListener('dragenter', function(e) {
       e.preventDefault();
