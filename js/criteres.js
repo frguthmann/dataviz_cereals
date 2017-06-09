@@ -18,3 +18,21 @@ function getCalories(){
   var s = document.getElementById("calories");
   return(s.value);
 }
+
+var elements = document.getElementsByClassName("dropper");
+for(var i = 0; i < elements.length; i ++){
+  var dropper = elements[i];
+  dropper.addEventListener('drop',function(e){
+    e.preventDefault();
+  });
+  dropper.addEventListener('dragenter', function(e) {
+      e.preventDefault();
+  });
+
+
+  dropper.addEventListener('dragover', function(e) {
+      e.preventDefault();
+  });
+
+
+}
