@@ -14,13 +14,20 @@
     <h1> Bien choisir ses céréales </h1>
   </header>
   <span class = "conteneur">
-  
+
     <div id = "pyramid"></div>
 
     <section id = "criteres">
       <p> Choisissez vos critères </p>
       <label> Sucre
-        <input id ="sucre" type = "range" step = 1 min = 1 max = 90 >
+        <div class="green">
+          <div class="orange">
+              <div class="red">
+                  <input type="range" id="myRange" value="50">
+              </div>
+          </div>
+      </div>
+
       </label>
       <label> Salé
         <input id = "sale" type = "range" step = 1 min = 1 max = 90>
