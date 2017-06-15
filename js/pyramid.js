@@ -42,10 +42,8 @@ function loadData(){
             tempRow = [];
             im = 0;
             row++;
-            console.log(pyramid);
         }
     }
-	console.log(pyramid.modelRows)
 }
 
 // Gather the DOM elements representing the pyramid and fill them with pictures
@@ -161,17 +159,25 @@ function rotateRow(row, direction){
   pyramid.idxModel[row] = startIdx % modelRowLength;
 }
 
+function updateView(){
+  for(row=0; row<pyramid.viewRows.length; row++){
+    for(cell=0; cell<pyramid.viewRows[row].length; cell++){
+      pyramid.viewRows[row][cell].src = pyramid.modelRows[row][cell].source;
+    }
+  }
+}
+
 window.onresize = function(event) {
 	treeheight=document.documentElement.clientHeight;
 	console.log(treeheight)
 }
 
 function displayDescription(obj){
-    console.log(obj + " over");
+  //console.log(obj + " over");
 }
 
 function hideDescription(obj){
-    console.log(obj + " not over");
+  //console.log(obj + " not over");
 }
 
 // Détection du mouseover

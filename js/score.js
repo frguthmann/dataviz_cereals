@@ -72,5 +72,36 @@ function GetBestCereal(preferences)
   return cereals_data[index];
 }
 
+// Sorts the global variable cereals_data by the given preferences
+function sortCereals(preferences)
+{
+  // Give a score to every cereal given the preferences
+  for(var i=0; i<cereals_data.length; i++){
+    cereals_data[i].score = GetScore(i, preferences);
+  }
+  
+  // Sort them by score, from smaller to bigger
+  cereals_data.sortOn('score');
+  
+  // Erase model as we have a new one
+  pyramid.modelRows = [];
+  // Reload the data in the right order
+  loadData();
+  // Update the view according to the model
+  updateView();
+}
+
+// Sort on key values: https://stackoverflow.com/questions/16648076/sort-array-on-key-value
+Array.prototype.sortOn = function(key){
+  this.sort(function(a, b){
+    if(a[key] < b[key]){
+      return -1;
+    }else if(a[key] > b[key]){
+      return 1;
+    }
+    return 0;
+  });
+}
+
 var pref = [{"criterion":"fiber", "choice":"50"}, {"criterion":"calories", "choice":"80"}];
 console.log(GetBestCereal(pref));
