@@ -56,14 +56,14 @@
 
 header{
 	position: relative;
-    width: 100%;
+  width: 100%;
 	height: 12vh;
 
 	text-align: center;
 	background-image: url('../images/top_fond.jpeg');
 	background-position: top;
 	border: solid 3px #f8f69d;
-	color: #ffffff;
+	color: #fff;
 }
 
 body{
@@ -180,4 +180,8 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	border-bottom-right-radius: 8px;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
+}
+
+#separation{
+	text-align: center;
 }
