@@ -19,6 +19,7 @@ function getCalories(){
   return(s.value);
 }
 
+
 var draggedElement = null;
 document.addEventListener('dragstart',function(e){
   draggedElement = e.target;
@@ -30,9 +31,13 @@ var isDropped = false;
 for(var i = 0; i < elements.length; i ++){
   var dropper = elements[i];
   dropper.addEventListener('drop',function(e){
-    if(! isDropped){
+    if(!isDropped){
       e.preventDefault();
+      document.getElementById("premier").style.visibility = "visible";
       e.target.append(draggedElement);
+    }
+    else{
+      return(true);
     }
   });
   dropper.addEventListener('dragenter', function(e) {
@@ -130,6 +135,7 @@ for(var i = 0; i < elements.length; i ++){
       e.target.append(draggedElement);
     }
     else{
+      alert(target.getElementsByClassName("draggable"));
       return(true);
     }
   });
@@ -150,6 +156,25 @@ for(var i = 0; i < elements.length; i ++){
     }
   });
 }
+
+var elements = document.getElementsByClassName("dropper5");
+for(var i = 0; i < elements.length; i ++){
+  var dropper5 = elements[i];
+  dropper5.addEventListener('drop',function(e){
+      console.log("drop");
+      e.preventDefault();
+      e.target.append(draggedElement);
+  });
+  dropper5.addEventListener('dragenter', function(e) {
+      console.log("enter");
+      e.preventDefault();
+  });
+  dropper5.addEventListener('dragover', function(e) {
+      console.log("over");
+      e.preventDefault();
+  });
+}
+
 
 
 var drag = document.getElementsByClassName("draggable");
