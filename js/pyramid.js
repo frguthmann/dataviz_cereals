@@ -1,6 +1,6 @@
 // Constants:
 var rowsModelSize = [3,10,20,44];
-var rowsViewSize = [1,3,5,7];
+var rowsViewSize = [1,3,5,8];
 
 /*  The pyramid contains three thing:
     Paths to the pictures it might display: modelRows. There are more than actually displayed
@@ -15,8 +15,14 @@ var pyramid = {
   idxModel:[]
 };
 
+var rowFillerleft = [];
+var rowFillerright = [];
+
 console.log(pyramid);
 console.log(cereals_data);
+
+var vitesseAnim = 0.3;
+var animOk = true;
 
 var treeheight=0;
 
@@ -25,6 +31,7 @@ firstPyramidSetup();
 
 // Loads the images into the pyramid modelRows and sets the start index for what should be displayed in idxModel
 function loadData(){
+	
     var row = 0;
     var im = 0;
     var tempRow = [];
@@ -60,6 +67,14 @@ function firstPyramidSetup(){
 		tree.appendChild(HTMLrow);
 		HTMLrow.setAttribute("style","margin-left: auto;margin-right: auto;text-align: center;");
 		HTMLrow.setAttribute("id","PyramidRow"+r);
+		
+		//add event ofr wheel (multisupport found on https://www.sitepoint.com/html5-javascript-mouse-wheel/)
+		if (HTMLrow.addEventListener) {
+			// IE9, Chrome, Safari, Opera
+			HTMLrow.addEventListener("mousewheel", MouseWheelHandler, false);
+			// Firefox
+			HTMLrow.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+		}
 
 
 
@@ -108,11 +123,30 @@ function createCell(r,im,row){
 	var image = document.createElement("img");
 	image.src = pyramid.modelRows[r][im].source;
 	image.setAttribute("class", "pyramidImage");
-  image.id = "r" + r + "im" + im;
+  	image.id = "r" + r + "im" + im;
+	
+	if(im==0){
+		var filler = document.createElement("img");
+		filler.src = pyramid.modelRows[r][im].source;
+		filler.setAttribute("class", "pyramidImage");
+		filler.setAttribute("style", "opacity:0;margin-left:-500%;position:absolute;visibility:hidden;");
+		rowFillerleft[r]=filler;
+	}
+	
+	if(im==rowsViewSize[r]-1){
+		var filler2 = document.createElement("img");
+		filler2.src = pyramid.modelRows[r][im].source;
+		filler2.setAttribute("class", "pyramidImage");
+		filler2.setAttribute("style", "opacity:0;position:absolute;visibility:hidden;margin-left:300%;");
+		rowFillerright[r]=filler2;
+	}
 
   var globalDataId = parseInt(image.src.match(/images\/(\d+)/)[1]) - 1;
 	var txt = document.createElement("span");
-	txt.innerHTML = cereals_data[globalDataId].name;
+	var chart = document.createElement("div");
+	txt.appendChild(chart);
+	chart.setAttribute("class", "chart");
+	//txt.innerHTML = cereals_data[globalDataId].name;
 
     //image.setAttribute("id",globalDataId);
 
@@ -120,14 +154,22 @@ function createCell(r,im,row){
 	link.setAttribute("href", "#");
 	link.setAttribute("class", "description");
 	link.appendChild(image);
+	if(im==0){
+		link.appendChild(filler);
+	}
+	if(im==rowsViewSize[r]-1){
+		link.appendChild(filler2);
+	}
 	link.appendChild(txt);
 
 	var cell = document.createElement("span");
 	cell.appendChild(link);
 	cell.setAttribute("class", "pyramidPicture");
 	var width = 80/(pyramid.modelRows.length*2);
+	var height = (25-4*r);
+	width = height/1.9;
 	//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
-	cell.setAttribute("style","width:"+width+"%;")
+	cell.setAttribute("style","width:"+width+"%; height:"+height+"vh;")
 
 	//console.log(cell)
 	HTMLli.appendChild(cell);
@@ -140,6 +182,10 @@ function createCell(r,im,row){
     Direction: +1 for left and -1 for right. (A bit counter intuitive I know)
 */
 function rotateRow(row, direction){
+	if(rowsViewSize[row]==1){
+		return;
+	}
+	animOk=false;
 	console.log("rotate")
   // What were we displaying before and where are we going
   var startIdx = pyramid.idxModel[row] + direction;
@@ -150,10 +196,43 @@ function rotateRow(row, direction){
     startIdx = modelRowLength - 1;
   }
 
+  if(direction ==-1){
+	  rowFillerleft[row].setAttribute("style","transform:translate(100%,0px); transition:all "+vitesseAnim+"s;margin-left:-200%;position:absolute;")
+	  rowFillerleft[row].src = pyramid.modelRows[row][(startIdx) % modelRowLength].source;
+	  rowFillerleft[row].addEventListener("transitionend", function(event) {
+		  this.setAttribute("style","margin-left:-500%;position:absolute;opacity:0;visibility:hidden;");
+		  animOk=true;
+		}, false);
+  }
+  
+  if(direction == 1){
+	  rowFillerright[row].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s;position:absolute;")
+	  rowFillerright[row].src = pyramid.modelRows[row][(startIdx+pyramid.viewRows[row].length-1) % modelRowLength].source;
+	  rowFillerright[row].addEventListener("transitionend", function(event) {
+		  this.setAttribute("style","position:absolute;opacity:0;visibility:hidden;margin-left:300%");
+		  animOk=true;
+		}, false);
+  }
+  
   // Rotate through the model and update the view
   for(im=0; im<pyramid.viewRows[row].length; im++){
+	pyramid.viewRows[row][im].setAttribute("style","transition:all 0s;")
     idx = (startIdx + im) % modelRowLength;
-    pyramid.viewRows[row][im].src = pyramid.modelRows[row][idx].source;
+	//var height = (document.documentElement.clientHeight-80)/(pyramid.modelRows.length);
+	pyramid.viewRows[row][im].setAttribute("alt",pyramid.modelRows[row][idx].source)
+	if(direction ==-1){
+		pyramid.viewRows[row][im].setAttribute("style","transform:translate(100%,0px); transition:all "+vitesseAnim+"s;")
+		if(im==pyramid.viewRows[row].length-1){
+			pyramid.viewRows[row][im].setAttribute("style","transform:translate(100%,0px); transition:all "+vitesseAnim+"s; opacity:0;")
+		}
+	}
+	else {
+		pyramid.viewRows[row][im].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s;")
+		if(im==0){
+			pyramid.viewRows[row][im].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s; opacity:0;")
+		}
+	}
+	pyramid.viewRows[row][im].addEventListener("transitionend", endAnimefct , false);
   }
   // Don't forget to update the pyramid: we moved through the model
   pyramid.idxModel[row] = startIdx % modelRowLength;
@@ -188,8 +267,22 @@ window.onresize = function(event) {
 	console.log(treeheight)
 }
 
-function displayDescription(obj){
-  //console.log(obj + " over");
+function endAnimefct(event){
+	console.log("Aya")
+	event.target.setAttribute("style","");
+	event.target.src = this.alt;
+	//event.target.removeEventListener("transitionend", endAnimefct);
+}
+
+
+function displayDescription(obj){	
+/*
+	var div = obj.getElementsByClassName("chart")[0];
+	console.log(div)
+	var options = {'title':'My Average Day', legend: {position: 'none'}};
+    var chart = new google.visualization.ColumnChart(div);
+	chart.draw(chartdata, options);
+	*/
 }
 
 function hideDescription(obj){
@@ -204,3 +297,25 @@ $( ".pyramidPicture" )
   .mouseout(function() {
     hideDescription(this);
   });
+
+/*
+function drawChart() {
+	console.log("AAAAAAAAAAAAAYYYYYYYYYAAAAAAAAA")
+	chartdata = google.visualization.arrayToDataTable([
+         ['Element', 'Density', { role: 'style' }],
+         ['Copper', 8.94, '#b87333'],            // RGB value
+         ['Silver', 10.49, 'silver'],            // English color name
+         ['Gold', 19.30, 'gold'],
+
+       ['Platinum', 21.45, 'color: #e5e4e2' ], // CSS-style declaration
+      ]);
+}
+*/
+
+function MouseWheelHandler(e) {
+	var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+	if(animOk){
+		rotateRow(e.target.id.match(/PyramidRow(\d)/)[1], delta);
+	}
+	return false;
+}

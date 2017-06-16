@@ -1,7 +1,6 @@
 /* Make all pictures the same size and align text to the middle with them */
 .pyramidPicture{
-	height:20vh;
-	min-width:50px;
+	min-width:40px;
 	min-height:60px;
 	vertical-align:middle;
 	display:inline-block;
@@ -80,23 +79,29 @@ body{
 	}
 
 a.description span{
+	min-height:60px;
+	width:100%;
+	
     position:absolute;
-	margin-top:23px;
-    margin-left:10px;
-	color: #ffffff;
-	background-image: url('../images/top_fond.jpeg');
-	background-position: top;
-	padding:15px;
-	border-radius:3px;
-	box-shadow:0 0 5px rgba(0,0,0,.7);
-	transform:scale(0) rotate(-12deg);
-	transition:all .25s;
+	bottom: 0;
+	left: 0;
+	color: #000000;
+	background-color: #ffffff;
+	transform:scaleY(0);
+	transform-origin : 50% 100%;
+	transition:all 0.75s;
 	opacity:0;
+	font-size: 100%;
 }
 
 a.description:hover span{ /*a.description:focus span*/
-    transform:scale(1) rotate(0);
-	opacity:1;
+    transform:scaleY(1);
+	opacity:0.8;
+}
+
+.chart {
+	height:10%;
+	padding:0;
 }
 
 
