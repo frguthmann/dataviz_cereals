@@ -85,6 +85,8 @@ function sortCereals(preferences)
   
   // Erase model as we have a new one
   pyramid.modelRows = [];
+  // Reset the index
+  pyramid.idxModel = [];
   // Reload the data in the right order
   loadData();
   // Update the view according to the model

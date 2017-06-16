@@ -108,8 +108,9 @@ function createCell(r,im,row){
 	var image = document.createElement("img");
 	image.src = pyramid.modelRows[r][im].source;
 	image.setAttribute("class", "pyramidImage");
+  image.id = "r" + r + "im" + im;
 
-    var globalDataId = parseInt(image.src.match(/images\/(\d+)/)[1]) - 1;
+  var globalDataId = parseInt(image.src.match(/images\/(\d+)/)[1]) - 1;
 	var txt = document.createElement("span");
 	txt.innerHTML = cereals_data[globalDataId].name;
 
@@ -122,7 +123,6 @@ function createCell(r,im,row){
 	link.appendChild(txt);
 
 	var cell = document.createElement("span");
-	cell.id = "r" + r + "im" + im;
 	cell.appendChild(link);
 	cell.setAttribute("class", "pyramidPicture");
 	var width = 80/(pyramid.modelRows.length*2);
@@ -160,11 +160,27 @@ function rotateRow(row, direction){
 }
 
 function updateView(){
+  cpt = 0;
   for(row=0; row<pyramid.viewRows.length; row++){
     for(cell=0; cell<pyramid.viewRows[row].length; cell++){
-      pyramid.viewRows[row][cell].src = pyramid.modelRows[row][cell].source;
+      infos = [row, cell];
+      setTimeout(animateCell, cpt*25, infos);
+      cpt++;
     }
   }
+}
+
+function animateCell(infos){
+  row = infos[0];
+  cell = infos[1];
+  pyramid.viewRows[row][cell].setAttribute("style","animation-name: fadeOut; animation-duration: 0.25s;");
+  pyramid.viewRows[row][cell].addEventListener("animationend", function(event) {
+    row = this.id.match(/\d+/)[0];
+    str = (this.id.replace( /^\D+/g, '')).replace(row,'');
+    cell = str.match(/\d+/)[0];
+    this.src = pyramid.modelRows[row][cell].source;
+    this.setAttribute("style","animation-name: fadeIn; animation-duration: 0.25s;");
+  }, false);  
 }
 
 window.onresize = function(event) {

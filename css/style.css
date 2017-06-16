@@ -185,3 +185,13 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 #separation{
 	text-align: center;
 }
+
+@keyframes fadeOut {      
+    0%   {position: relative; left: 0px; z-index:1000; opacity: 1;}
+    100% {position: relative; left: 150px; z-index:1000; opacity: 0;}
+}
+
+@keyframes fadeIn {      
+    0%   {position: relative; left: -300px; z-index:1000; opacity: 0;}
+    100% {position: relative; left: 0px; z-index:1000; opacity: 1;}
+}
