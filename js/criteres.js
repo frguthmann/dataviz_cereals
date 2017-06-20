@@ -61,6 +61,12 @@ for(var idx=0; idx<droppers.length; idx++){
     var dropper = document.getElementsByClassName(dropperName)[0];
 
     dropper.addEventListener('drop',function(e){
+      
+      // Check if spot is full before continuing
+      if(e.target.getElementsByClassName("draggable").length > 0){
+        return;
+      }
+      
       e.preventDefault();
       var parent = draggedElement.parentNode;
       var idxTarget = parseInt(e.target.className.match(/\d+/)[0]) - 1;
@@ -86,7 +92,7 @@ for(var idx=0; idx<droppers.length; idx++){
 
       // Update view as we shuffled criteria
       sortCereals(pref);
-      console.log(pref)
+      console.log(pref);
 
       e.target.prepend(draggedElement);
     });
