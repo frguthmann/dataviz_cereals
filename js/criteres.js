@@ -34,6 +34,9 @@ document.addEventListener('dragend',function(e){
   }
 });
 
+/*  Add listenners for when a slider is released.
+    It updates the pref variable with the current value
+*/
 var sliders = document.getElementsByClassName("slider")
 for(i=0; i<sliders.length; i++){
     sliders[i].addEventListener("change", function(e) {
@@ -41,10 +44,15 @@ for(i=0; i<sliders.length; i++){
         criterion = dropper.getElementsByClassName('draggable')[0].innerText;
         var idx = parseInt(dropper.className.match(/\d+/)[0]) - 1;
         value = getCriterionValue(criterion);
+        
+        // Update pref with the slider value and criterion
         pref[idx].choice = value;
-        sortCereals(pref);
-        console.log("crit: " + criterion + " value: " + value + " drop Nbr: " + idx);
+        pref[idx].criterion = prefMap[criterion];
         console.log(pref);
+
+        // Sort and update view
+        sortCereals(pref);
+        //console.log("crit: " + criterion + " value: " + value + " drop Nbr: " + idx);
     }, false);
 }
 
@@ -55,10 +63,31 @@ for(var idx=0; idx<droppers.length; idx++){
     dropper.addEventListener('drop',function(e){
       e.preventDefault();
       var parent = draggedElement.parentNode;
+      var idxTarget = parseInt(e.target.className.match(/\d+/)[0]) - 1;
       if(parent.className != "dropper5"){
         e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
-        parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
+        parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
+        
+        // Switch pref according to new placement to update score
+        var idxParent = parseInt(parent.className.match(/\d+/)[0]) - 1;
+        
+        var criterion = pref[idxParent].criterion;
+        var value = pref[idxParent].choice;
+        pref[idxParent].criterion = pref[idxTarget].criterion;
+        pref[idxParent].choice = pref[idxTarget].choice;
+        pref[idxTarget].criterion = criterion;
+        pref[idxTarget].choice = value;
+      }else{
+        value = e.target.getElementsByClassName("slider")[0].value;
+        criterion = prefMap[draggedElement.getElementsByClassName("id")[0].innerText];
+        pref[idxTarget].criterion = criterion;
+        pref[idxTarget].choice = value;
       }
+
+      // Update view as we shuffled criteria
+      sortCereals(pref);
+      console.log(pref)
+
       e.target.prepend(draggedElement);
     });
 
@@ -77,6 +106,14 @@ for(var i = 0; i < elements.length; i ++){
   var dropper5 = elements[i];
   dropper5.addEventListener('drop',function(e){
       e.preventDefault();
+
+      // Update pref and view as we removed a criterion from the computation 
+      var idxParent = parseInt(draggedElement.parentNode.className.match(/\d+/)[0]) - 1;
+      pref[idxParent].criterion = "NA";
+      pref[idxParent].choice = -1;
+      sortCereals(pref);
+      console.log(pref);
+
       e.target.prepend(draggedElement);
   });
   dropper5.addEventListener('dragenter', function(e) {

@@ -1,3 +1,5 @@
+var pref = [{"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}];
+var prefMap = {"Sucre":"sugars", "Salé":"sodium", "Graisse":"fat", "Calories":"calories"};
 var Intervals = {};
 
 function InitializeIntervals()
@@ -45,6 +47,11 @@ function GetScore(index , preferences)
 
   for(var i=0; i<preferences.length; i++)
   {
+    // If the value is -1, it means the criterion should be discarded
+    if(preferences[i]['choice'] == -1){
+      continue;
+    }
+
     // [A, B] --> [a, b]
     // (val - A) * (b - a) / (B- A) + a
     var A = Intervals[preferences[i]['criterion']]['min'];
@@ -82,6 +89,7 @@ function sortCereals(preferences)
 
   // Sort them by score, from smaller to bigger
   cereals_data.sortOn('score');
+  console.log("Best score: " + cereals_data[0].score + " for: " + cereals_data[0].name);
 
   // Erase model as we have a new one
   pyramid.modelRows = [];
@@ -104,6 +112,3 @@ Array.prototype.sortOn = function(key){
     return 0;
   });
 }
-
-var pref = [{"criterion":"fiber", "choice":"50"}, {"criterion":"calories", "choice":"80"}, {"criterion":"carbo", "choice":"50"}, {"criterion":"sugars", "choice":"50"}];
-console.log(GetBestCereal(pref));

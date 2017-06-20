@@ -1,127 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-  <title>Cereals Killer</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="data/cereals.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-
-</head>
-<body>
-  <nav>
-  </nav>
-  <header>
-    <h1> Bien choisir ses céréales </h1>
-  </header>
-  <span class = "conteneur">
-
-    <div id = "pyramid"></div>
-
-    <section id = "criteres">
-      <p> Classez les critères par ordre d'importance </p>
-      <span>1
-        <div class = "dropper1">
-          <div class="red">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cereals Killer</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="data/cereals.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+    </nav>
+    <header>
+      <h1> Bien choisir ses céréales </h1>
+    </header>
+    <span class = "conteneur">
+      <div id = "pyramid"></div>
+      <section id = "criteres">
+        <p> Classez les critères par ordre d'importance </p>
+        <span>
+          1
+          <div class = "dropper1">
+            <div class="red">
               <div class="orange">
-                  <div class="green">
-                      <input class = "slider" type="range" min = 1 max = 100 step = 1 value = "50" >
-                  </div>
+                <div class="green">
+                  <input class = "slider" type="range" min = 1 max = 100 step = 1 value = "50" >
+                </div>
               </div>
+            </div>
           </div>
-
-        </div>
-      </span>
-    </br>
-
-
-    <span>2
-
-         <div class = "dropper2">
-
-                       <div class="red">
-                           <div class="orange">
-                               <div class="green">
-                                   <input class = "slider" type="range" min = 1 max = 100 step = 1>
-                               </div>
-                           </div>
-                         </div>
-        </div>
-      </span>
+        </span>
         </br>
-        <span> 3
+        <span>
+          2
+          <div class = "dropper2">
+            <div class="red">
+              <div class="orange">
+                <div class="green">
+                  <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        </br>
+        <span>
+          3
           <div class = "dropper3">
-
-                        <div class="red">
-                            <div class="orange">
-                                <div class="green">
-                                    <input class = "slider" type="range" min = 1 max = 100 step = 1>
-                                </div>
-                            </div>
-                          </div>
-        </div>
-      </span>
-        </br>
-        <span>4
-         <div class = "dropper4">
-
-                       <div class="red">
-                           <div class="orange">
-                               <div class="green">
-                                   <input class = "slider" type="range" min = 1 max = 100 step = 1>
-                               </div>
-                           </div>
-                         </div>
-        </div>
-      </span>
-        </br>
-
-      <p id= "separation">
-        --------------------------------</p>
-      <span> Critères disponibles </span>
-        <div class = dropper5>
-
-          <div class = "draggable" draggable = "true">
-            <label class = "id"> Sucre
-
-            </label>
+            <div class="red">
+              <div class="orange">
+                <div class="green">
+                  <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div  class = "draggable" draggable = "true">
-
-            <label class = "id"> Salé
-
-              </label>
+        </span>
+        </br>
+        <span>
+          4
+          <div class = "dropper4">
+            <div class="red">
+              <div class="orange">
+                <div class="green">
+                  <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                </div>
+              </div>
             </div>
-
-            <div  class = "draggable" draggable = "true">
-
-            <label class = "id"> Graisse
-                          </label>
-            </div>
-
-
-            <div class = "draggable"  draggable = "true">
-              <label class = "id"> Calories
+          </div>
+        </span>
+        </br>
+        <p id= "separation">
+          --------------------------------
+        </p>
+        <span> Critères disponibles </span>
+        <div class = dropper5>
+        <div class = "draggable" draggable = "true">
+          <label class = "id"> Sucre
           </label>
         </div>
-
-      </span>
-      <br>
-      <button type="button" onclick="sortCereals(pref)">Test Tri Cereales</button>
-
-
-        </section>
-
-
-</body>
-
+        <div  class = "draggable" draggable = "true">
+          <label class = "id"> Salé
+          </label>
+        </div>
+        <div  class = "draggable" draggable = "true">
+          <label class = "id"> Graisse
+          </label>
+        </div>
+        <div class = "draggable"  draggable = "true">
+          <label class = "id"> Calories
+          </label>
+        </div>
+    </span>
+    <br>
+    <button type="button" onclick="sortCereals(pref)">Test Tri Cereales</button>
+    </section>
+  </body>
   <script src="js/pyramid.js"></script>
   <script src="js/criteres.js"></script>
   <script src="js/score.js"></script>
-
-
 </html>
