@@ -22,79 +22,94 @@
     <div id = "pyramid"></div>
 
     <section id = "criteres">
-      <p> Choisissez vos critères </p>
-      <ol>
-        <li  class = "dropper"> </li>
-        <li  class = "dropper2"> </li>
-        <li  class = "dropper3"> </li>
-        <li  class = "dropper4"> </li>
-      </ol>
+      <p> Classez les critères par ordre d'importance </p>
+      <span>1
+        <div class = "dropper">
+          <div class="red">
+              <div class="orange">
+                  <div class="green">
+                      <input class = "slider" type="range" min = 1 max = 100 step = 1 value = "50" >
+                  </div>
+              </div>
+          </div>
+
+        </div>
+      </span>
+    </br>
+
+
+    <span>2
+
+         <div class = "dropper2">
+
+                       <div class="red">
+                           <div class="orange">
+                               <div class="green">
+                                   <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                               </div>
+                           </div>
+                         </div>
+        </div>
+      </span>
+        </br>
+        <span> 3
+          <div class = "dropper3">
+
+                        <div class="red">
+                            <div class="orange">
+                                <div class="green">
+                                    <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                                </div>
+                            </div>
+                          </div>
+        </div>
+      </span>
+        </br>
+        <span>4
+         <div class = "dropper4">
+
+                       <div class="red">
+                           <div class="orange">
+                               <div class="green">
+                                   <input class = "slider" type="range" min = 1 max = 100 step = 1>
+                               </div>
+                           </div>
+                         </div>
+        </div>
+      </span>
+        </br>
+
       <p id= "separation">
         --------------------------------</p>
-
-        <div>
+      <span> Critères disponibles </span>
+        <div class = dropper5>
 
           <div class = "draggable" draggable = "true">
-            <label> Sucre
-              <div class="red">
-                <div class="orange">
-                    <div class="green">
-                        <input type="range" min = 1 max = 100 step = 1>
-                    </div>
-                </div>
-            </div>
+            <label class = "id"> Sucre
 
             </label>
           </div>
-        </div>
-          <div>
 
           <div  class = "draggable" draggable = "true">
 
-            <label> Salé
+            <label class = "id"> Salé
 
-              <div class="red">
-                <div class="orange">
-                    <div class="green">
-                        <input type="range" min = 1 max = 100 step = 1>
-                    </div>
-                </div>
-              </div>
               </label>
             </div>
-          </div>
-            <div>
 
-          <div  class = "draggable" draggable = "true">
+            <div  class = "draggable" draggable = "true">
 
-            <label> Graisse
-              <div class="red">
-                <div class="orange">
-                    <div class="green">
-                        <input type="range" min = 1 max = 100 step = 1>
-                    </div>
-                </div>
-              </div>
-              </label>
+            <label class = "id"> Graisse
+                          </label>
             </div>
-          </div>
-            <div>
 
-          <div class = "draggable"  draggable = "true">
 
-            <label> Calories
-              <div class="red">
-                <div class="orange">
-                    <div class="green">
-                        <input type="range" min = 1 max = 100 step = 1>
-                    </div>
-                </div>
-            </div>
+            <div class = "draggable"  draggable = "true">
+              <label class = "id"> Calories
           </label>
         </div>
-        </div>
-      </span>
 
+      </span>
       <br>
       <button type="button" onclick="sortCereals(pref)">Test Tri Cereales</button>
 

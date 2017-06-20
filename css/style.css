@@ -73,10 +73,15 @@ body{
 		position: relative;
 		float:left;
 		width: 30%;
+		align-items: center;
+		text-align: center;
 		display: flex;
 		flex-direction: column;
-		background-color: #f8f69d;
+		border: solid 5px #f5f16d;
+		background-color:#f7f697;
+		border-radius: 5px;
 	}
+
 
 a.description span{
 	min-height:60px;
@@ -117,10 +122,6 @@ a.description:hover span{ /*a.description:focus span*/
 		width: 100%;
 	}
 
-	#criteres{
-		width: 100%;
-		text-align: center;
-	}
 
 	a.description span{
 		font-size: 50%;
@@ -179,7 +180,8 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .red{
-	width: 320px;
+	visibility: hidden;
+	width: 300px;
 	background: red;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -199,4 +201,71 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 @keyframes fadeIn {      
     0%   {position: relative; left: -300px; z-index:1000; opacity: 0;}
     100% {position: relative; left: 0px; z-index:1000; opacity: 1;}
+}
+
+.dropper{
+	border: solid #e4e211 2px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	height: 40px;
+	width: 300px;
+	text-align: center;
+	align-items: center;
+}
+
+
+.dropper2{
+	border: solid #e4e211 2px;
+	height: 40px;
+	width: 300px;
+	text-align: center;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+}
+
+
+.dropper3{
+	border: solid #e4e211 2px;
+	height: 40px;
+	width: 300px;
+	text-align: center;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+}
+
+
+.dropper4{
+	border: solid #e4e211 2px;
+	height: 40px;
+	width: 300px;
+	text-align: center;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
+}
+
+.dropper5{
+	border: solid #e4e211 2px;
+	width: 300px;
+	height: 80px;
+	text-align: center;
+	align-items: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+
 }
