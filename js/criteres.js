@@ -35,28 +35,44 @@ document.addEventListener('dragend',function(e){
 });
 
 for(var idx=0; idx<droppers.length; idx++){
-    var elements = document.getElementsByClassName(droppers[idx]);
-    for(var i = 0; i < elements.length; i ++){
-        var dropper = elements[i];
-        dropper.addEventListener('drop',function(e){
-          e.preventDefault();
-          var parent = draggedElement.parentNode;
-          if(parent.className != "dropper5" && droppers[idx]!="dropper5"){
-            e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
-            parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
-          }
-          e.target.prepend(draggedElement);
-        });
+    var dropperName = droppers[idx];
+    var dropper = document.getElementsByClassName(dropperName)[0];
 
-        dropper.addEventListener('dragenter', function(e) {
-          e.preventDefault();
-        });
+    dropper.addEventListener('drop',function(e){
+      e.preventDefault();
+      var parent = draggedElement.parentNode;
+      if(parent.className != "dropper5"){
+        e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
+        parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
+      }
+      e.target.prepend(draggedElement);
+    });
 
-        dropper.addEventListener('dragover', function(e) {
-          e.preventDefault();
-        });
-    }
+    dropper.addEventListener('dragenter', function(e) {
+      e.preventDefault();
+    });
+
+    dropper.addEventListener('dragover', function(e) {
+      e.preventDefault();
+    });
+
 }
+
+var elements = document.getElementsByClassName("dropper5");
+for(var i = 0; i < elements.length; i ++){
+  var dropper5 = elements[i];
+  dropper5.addEventListener('drop',function(e){
+      e.preventDefault();
+      e.target.prepend(draggedElement);
+  });
+  dropper5.addEventListener('dragenter', function(e) {
+      e.preventDefault();
+  });
+  dropper5.addEventListener('dragover', function(e) {
+      e.preventDefault();
+  });
+}
+
 
 
 var drag = document.getElementsByClassName("draggable");
