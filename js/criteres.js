@@ -27,7 +27,6 @@ document.addEventListener('dragstart',function(e){
     parent.getElementsByClassName("red")[0].style.visibility = "hidden";
     e.dataTransfer.setData('Number',parent.getElementsByClassName("slider")[0].value);
   }
-
 });
 
 document.addEventListener('dragend',function(e){
@@ -148,5 +147,5 @@ var drag = document.getElementsByClassName("draggable");
 for(var i = 0; i < drag.length; i ++){
   drag[i].addEventListener('drop',function(e){
     e.stopPropagation();
-  });
+    });
 }
