@@ -1,23 +1,20 @@
-function getSucre(){
-  var s = document.getElementById("sucre");
-  return(s.value);
-}
+ var droppers = ["dropper","dropper2","dropper3","dropper4"];
 
-function getSale(){
-  var s = document.getElementById("sale");
-  return(s.value);
+/*  Returns the value of the criteria passed as a string, ex: getCriteriaValue("Sucre");
+    If the criteria is not found, the function returns -1
+*/
+function getCriterionValue(criterion){
+  for(i=0; i<droppers.length; i++){
+    var dropper = document.getElementsByClassName(droppers[i])[0];
+    var label = dropper.getElementsByClassName("id");
+    if(label.length>0){
+        if(label[0].innerText == criterion){
+            return dropper.getElementsByClassName("slider")[0].value;
+        }
+    }
+  }
+  return -1;
 }
-
-function getGraisse(){
-  var s = document.getElementById("graisse");
-  return(s.value);
-}
-
-function getCalories(){
-  var s = document.getElementById("calories");
-  return(s.value);
-}
-
 
 var draggedElement = null;
 document.addEventListener('dragstart',function(e){

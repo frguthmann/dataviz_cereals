@@ -31,7 +31,7 @@ firstPyramidSetup();
 
 // Loads the images into the pyramid modelRows and sets the start index for what should be displayed in idxModel
 function loadData(){
-	
+
     var row = 0;
     var im = 0;
     var tempRow = [];
@@ -67,7 +67,7 @@ function firstPyramidSetup(){
 		tree.appendChild(HTMLrow);
 		HTMLrow.setAttribute("style","margin-left: auto;margin-right: auto;text-align: center;");
 		HTMLrow.setAttribute("id","PyramidRow"+r);
-		
+
 		//add event ofr wheel (multisupport found on https://www.sitepoint.com/html5-javascript-mouse-wheel/)
 		if (HTMLrow.addEventListener) {
 			// IE9, Chrome, Safari, Opera
@@ -124,7 +124,7 @@ function createCell(r,im,row){
 	image.src = pyramid.modelRows[r][im].source;
 	image.setAttribute("class", "pyramidImage");
   	image.id = "r" + r + "im" + im;
-	
+
 	if(im==0){
 		var filler = document.createElement("img");
 		filler.src = pyramid.modelRows[r][im].source;
@@ -132,7 +132,7 @@ function createCell(r,im,row){
 		filler.setAttribute("style", "opacity:0;margin-left:-500%;position:absolute;visibility:hidden;");
 		rowFillerleft[r]=filler;
 	}
-	
+
 	if(im==rowsViewSize[r]-1){
 		var filler2 = document.createElement("img");
 		filler2.src = pyramid.modelRows[r][im].source;
@@ -204,7 +204,7 @@ function rotateRow(row, direction){
 		  animOk=true;
 		}, false);
   }
-  
+
   if(direction == 1){
 	  rowFillerright[row].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s;position:absolute;")
 	  rowFillerright[row].src = pyramid.modelRows[row][(startIdx+pyramid.viewRows[row].length-1) % modelRowLength].source;
@@ -213,7 +213,7 @@ function rotateRow(row, direction){
 		  animOk=true;
 		}, false);
   }
-  
+
   // Rotate through the model and update the view
   for(im=0; im<pyramid.viewRows[row].length; im++){
 	pyramid.viewRows[row][im].setAttribute("style","transition:all 0s;")
@@ -259,7 +259,7 @@ function animateCell(infos){
     cell = str.match(/\d+/)[0];
     this.src = pyramid.modelRows[row][cell].source;
     this.setAttribute("style","animation-name: fadeIn; animation-duration: 0.25s;");
-  }, false);  
+  }, false);
 }
 
 window.onresize = function(event) {
@@ -268,14 +268,14 @@ window.onresize = function(event) {
 }
 
 function endAnimefct(event){
-	console.log("Aya")
+	//console.log("Aya")
 	event.target.setAttribute("style","");
 	event.target.src = this.alt;
 	//event.target.removeEventListener("transitionend", endAnimefct);
 }
 
 
-function displayDescription(obj){	
+function displayDescription(obj){
 /*
 	var div = obj.getElementsByClassName("chart")[0];
 	console.log(div)

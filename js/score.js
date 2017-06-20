@@ -79,10 +79,10 @@ function sortCereals(preferences)
   for(var i=0; i<cereals_data.length; i++){
     cereals_data[i].score = GetScore(i, preferences);
   }
-  
+
   // Sort them by score, from smaller to bigger
   cereals_data.sortOn('score');
-  
+
   // Erase model as we have a new one
   pyramid.modelRows = [];
   // Reset the index
@@ -91,6 +91,7 @@ function sortCereals(preferences)
   loadData();
   // Update the view according to the model
   updateView();
+  console.log(getCriterionValue("Sucre"));
 }
 
 // Sort on key values: https://stackoverflow.com/questions/16648076/sort-array-on-key-value
