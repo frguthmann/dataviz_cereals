@@ -34,6 +34,14 @@ document.addEventListener('dragend',function(e){
   }
 });
 
+var sliders = document.getElementsByClassName("slider")
+for(i=0; i<sliders.length; i++){
+    sliders[i].addEventListener("change", function(e) {
+        criterion = e.path[4].getElementsByClassName('draggable')[0].innerText;
+        console.log("crit: " + criterion + " value: " + getCriterionValue(criterion));
+    }, false);
+}
+
 for(var idx=0; idx<droppers.length; idx++){
     var dropperName = droppers[idx];
     var dropper = document.getElementsByClassName(dropperName)[0];
