@@ -34,7 +34,7 @@ document.addEventListener('dragend',function(e){
   draggedElement = e.target;
   var parent = draggedElement.parentNode;
   if(parent.className != "dropper5"){
-    //parent.getElementsByClassName("red")[0].style.visibility = "visible";
+    parent.getElementsByClassName("red")[0].style.visibility = "visible";
   }
 });
 
@@ -45,7 +45,6 @@ for(var i = 0; i < elements.length; i ++){
   dropper.addEventListener('drop',function(e){
       e.preventDefault();
       var parent = draggedElement.parentNode;
-      dropper.getElementsByClassName("red")[0].style.visibility = "visible";
       if(parent.className != "dropper5"){
         e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
         parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
@@ -69,7 +68,6 @@ for(var i = 0; i < elements.length; i ++){
   dropper2.addEventListener('drop',function(e){
     e.preventDefault();
     var parent = draggedElement.parentNode;
-    dropper.getElementsByClassName("red")[0].style.visibility = "visible";
     if(parent.className != "dropper5"){
       e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
       parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
@@ -92,7 +90,6 @@ for(var i = 0; i < elements.length; i ++){
   dropper3.addEventListener('drop',function(e){
     e.preventDefault();
     var parent = draggedElement.parentNode;
-    dropper.getElementsByClassName("red")[0].style.visibility = "visible";
     if(parent.className != "dropper5"){
       e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
       parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
@@ -115,7 +112,6 @@ for(var i = 0; i < elements.length; i ++){
   dropper4.addEventListener('drop',function(e){
     e.preventDefault();
     var parent = draggedElement.parentNode;
-    dropper.getElementsByClassName("red")[0].style.visibility = "visible";
     if(parent.className != "dropper5"){
       e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
       parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML
