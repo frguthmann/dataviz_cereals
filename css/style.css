@@ -86,7 +86,7 @@ body{
 a.description span{
 	min-height:60px;
 	width:100%;
-	
+
     position:absolute;
 	bottom: 0;
 	left: 0;
@@ -193,17 +193,17 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	text-align: center;
 }
 
-@keyframes fadeOut {      
+@keyframes fadeOut {
     0%   {position: relative; left: 0px; z-index:1000; opacity: 1;}
     100% {position: relative; left: 150px; z-index:1000; opacity: 0;}
 }
 
-@keyframes fadeIn {      
+@keyframes fadeIn {
     0%   {position: relative; left: -300px; z-index:1000; opacity: 0;}
     100% {position: relative; left: 0px; z-index:1000; opacity: 1;}
 }
 
-.dropper{
+.dropper1, .dropper2, .dropper3, .dropper4{
 	border: solid #e4e211 2px;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
@@ -213,48 +213,6 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	width: 300px;
 	text-align: center;
 	align-items: center;
-}
-
-
-.dropper2{
-	border: solid #e4e211 2px;
-	height: 40px;
-	width: 300px;
-	text-align: center;
-	align-items: center;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-
-}
-
-
-.dropper3{
-	border: solid #e4e211 2px;
-	height: 40px;
-	width: 300px;
-	text-align: center;
-	align-items: center;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-
-}
-
-
-.dropper4{
-	border: solid #e4e211 2px;
-	height: 40px;
-	width: 300px;
-	text-align: center;
-	align-items: center;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-
 }
 
 .dropper5{

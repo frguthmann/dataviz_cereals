@@ -91,7 +91,6 @@ function sortCereals(preferences)
   loadData();
   // Update the view according to the model
   updateView();
-  console.log(getCriterionValue("Sucre"));
 }
 
 // Sort on key values: https://stackoverflow.com/questions/16648076/sort-array-on-key-value
@@ -106,5 +105,5 @@ Array.prototype.sortOn = function(key){
   });
 }
 
-var pref = [{"criterion":"fiber", "choice":"50"}, {"criterion":"calories", "choice":"80"}];
+var pref = [{"criterion":"fiber", "choice":"50"}, {"criterion":"calories", "choice":"80"}, {"criterion":"carbo", "choice":"50"}, {"criterion":"sugars", "choice":"50"}];
 console.log(GetBestCereal(pref));

@@ -1,4 +1,4 @@
- var droppers = ["dropper","dropper2","dropper3","dropper4"];
+ var droppers = ["dropper1","dropper2","dropper3","dropper4"];
 
 /*  Returns the value of the criteria passed as a string, ex: getCriteriaValue("Sucre");
     If the criteria is not found, the function returns -1
@@ -37,8 +37,14 @@ document.addEventListener('dragend',function(e){
 var sliders = document.getElementsByClassName("slider")
 for(i=0; i<sliders.length; i++){
     sliders[i].addEventListener("change", function(e) {
-        criterion = e.path[4].getElementsByClassName('draggable')[0].innerText;
-        console.log("crit: " + criterion + " value: " + getCriterionValue(criterion));
+        var dropper = e.path[4];
+        criterion = dropper.getElementsByClassName('draggable')[0].innerText;
+        var idx = parseInt(dropper.className.match(/\d+/)[0]) - 1;
+        value = getCriterionValue(criterion);
+        pref[idx].choice = value;
+        sortCereals(pref);
+        console.log("crit: " + criterion + " value: " + value + " drop Nbr: " + idx);
+        console.log(pref);
     }, false);
 }
 
