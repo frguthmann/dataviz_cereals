@@ -24,6 +24,9 @@ document.addEventListener('dragstart',function(e){
     parent.getElementsByClassName("red")[0].style.visibility = "hidden";
     e.dataTransfer.setData('Number',parent.getElementsByClassName("slider")[0].value);
   }
+  else{
+    e.dataTransfer.setData('text','useless');  
+  }
 });
 
 document.addEventListener('dragend',function(e){
@@ -44,7 +47,7 @@ for(i=0; i<sliders.length; i++){
         criterion = dropper.getElementsByClassName('draggable')[0].innerText;
         var idx = parseInt(dropper.className.match(/\d+/)[0]) - 1;
         value = getCriterionValue(criterion);
-        
+
         // Update pref with the slider value and criterion
         pref[idx].choice = value;
         pref[idx].criterion = prefMap[criterion];
@@ -61,22 +64,22 @@ for(var idx=0; idx<droppers.length; idx++){
     var dropper = document.getElementsByClassName(dropperName)[0];
 
     dropper.addEventListener('drop',function(e){
-      
+
       // Check if spot is full before continuing
       if(e.target.getElementsByClassName("draggable").length > 0){
         return;
       }
-      
+
       e.preventDefault();
       var parent = draggedElement.parentNode;
       var idxTarget = parseInt(e.target.className.match(/\d+/)[0]) - 1;
       if(parent.className != "dropper5"){
         e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
         parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
-        
+
         // Switch pref according to new placement to update score
         var idxParent = parseInt(parent.className.match(/\d+/)[0]) - 1;
-        
+
         var criterion = pref[idxParent].criterion;
         var value = pref[idxParent].choice;
         pref[idxParent].criterion = pref[idxTarget].criterion;
@@ -113,7 +116,7 @@ for(var i = 0; i < elements.length; i ++){
   dropper5.addEventListener('drop',function(e){
       e.preventDefault();
 
-      // Update pref and view as we removed a criterion from the computation 
+      // Update pref and view as we removed a criterion from the computation
       var idxParent = parseInt(draggedElement.parentNode.className.match(/\d+/)[0]) - 1;
       pref[idxParent].criterion = "NA";
       pref[idxParent].choice = -1;
