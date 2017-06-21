@@ -16,6 +16,22 @@ function getCriterionValue(criterion){
   return -1;
 }
 
+function scoreNOTFromDropper5(idxParent,idxTarget){
+  var criterion = pref[idxParent].criterion;
+  var value = pref[idxParent].choice;
+  pref[idxParent].criterion = pref[idxTarget].criterion;
+  pref[idxParent].choice = pref[idxTarget].choice;
+  pref[idxTarget].criterion = criterion;
+  pref[idxTarget].choice = value;
+}
+
+function scoreFromDropper5(idxTarget){
+  criterion = prefMap[draggedElement.getElementsByClassName("id")[0].innerText];
+  pref[idxTarget].criterion = criterion;
+  pref[idxTarget].choice = value;
+}
+
+
 var draggedElement = null;
 document.addEventListener('dragstart',function(e){
   draggedElement = e.target;
@@ -62,8 +78,8 @@ for(i=0; i<sliders.length; i++){
 for(var idx=0; idx<droppers.length; idx++){
     var dropperName = droppers[idx];
     var dropper = document.getElementsByClassName(dropperName)[0];
-
     dropper.addEventListener('drop',function(e){
+      var idxTarget = parseInt(this.className.match(/\d+/)[0]) - 1;
       console.log("drop");
       // Check if spot is full before continuing
       if(this.getElementsByClassName("draggable").length > 0){
@@ -73,34 +89,45 @@ for(var idx=0; idx<droppers.length; idx++){
           document.getElementsByClassName("dropper5")[0].prepend(this.getElementsByClassName("draggable")[0]);
           this.prepend(draggedElement);
           this.getElementsByClassName("slider")[0].value = "50";
-        }
-        else{
+          value = this.getElementsByClassName("slider")[0].value;
+          scoreFromDropper5(idxTarget);
 
         }
+        else{
+          var tmp = this.getElementsByClassName("slider")[0].value;
+          this.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
+          parent.getElementsByClassName("slider")[0].value = tmp;
+          var tmpid = this.getElementsByClassName("slider")[0].id;
+          this.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
+          parent.getElementsByClassName("slider")[0].id = tmpid;
+          var tmplabel = this.getElementsByClassName("draggable")[0];
+          this.prepend(draggedElement);
+          parent.prepend(tmplabel);
+          parent.getElementsByClassName("red")[0].style.visibility = "visible";
+          var idxParent = parseInt(parent.className.match(/\d+/)[0]) - 1;
+          scoreNOTFromDropper5(idxParent,idxTarget);
+
+        }
+
+        console.log(pref);
+
         return;
       }
 
       e.preventDefault();
       var parent = draggedElement.parentNode;
-      var idxTarget = parseInt(this.className.match(/\d+/)[0]) - 1;
       if(parent.className != "dropper5"){
+        parent.getElementsByClassName("slider")[0].value = "50";
         this.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
-        parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
+        this.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
 
         // Switch pref according to new placement to update score
         var idxParent = parseInt(parent.className.match(/\d+/)[0]) - 1;
+        scoreNOTFromDropper5(idxParent,idxTarget);
 
-        var criterion = pref[idxParent].criterion;
-        var value = pref[idxParent].choice;
-        pref[idxParent].criterion = pref[idxTarget].criterion;
-        pref[idxParent].choice = pref[idxTarget].choice;
-        pref[idxTarget].criterion = criterion;
-        pref[idxTarget].choice = value;
       }else{
         value = this.getElementsByClassName("slider")[0].value;
-        criterion = prefMap[draggedElement.getElementsByClassName("id")[0].innerText];
-        pref[idxTarget].criterion = criterion;
-        pref[idxTarget].choice = value;
+        scoreFromDropper5(idxTarget);
       }
 
       // Update view as we shuffled criteria
