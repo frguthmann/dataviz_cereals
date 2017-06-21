@@ -25,7 +25,7 @@ document.addEventListener('dragstart',function(e){
     e.dataTransfer.setData('Number',parent.getElementsByClassName("slider")[0].value);
   }
   else{
-    e.dataTransfer.setData('text','useless');  
+    e.dataTransfer.setData('text','useless');
   }
 });
 
@@ -64,17 +64,27 @@ for(var idx=0; idx<droppers.length; idx++){
     var dropper = document.getElementsByClassName(dropperName)[0];
 
     dropper.addEventListener('drop',function(e){
-
+      console.log("drop");
       // Check if spot is full before continuing
-      if(e.target.getElementsByClassName("draggable").length > 0){
+      if(this.getElementsByClassName("draggable").length > 0){
+        var parent = draggedElement.parentNode;
+        if(parent.className == "dropper5"){
+          e.preventDefault();
+          document.getElementsByClassName("dropper5")[0].prepend(this.getElementsByClassName("draggable")[0]);
+          this.prepend(draggedElement);
+          this.getElementsByClassName("slider")[0].value = "50";
+        }
+        else{
+
+        }
         return;
       }
 
       e.preventDefault();
       var parent = draggedElement.parentNode;
-      var idxTarget = parseInt(e.target.className.match(/\d+/)[0]) - 1;
+      var idxTarget = parseInt(this.className.match(/\d+/)[0]) - 1;
       if(parent.className != "dropper5"){
-        e.target.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
+        this.getElementsByClassName("slider")[0].value = e.dataTransfer.getData('Number');
         parent.getElementsByClassName("slider")[0].id = draggedElement.getElementsByClassName("id")[0].innerHTML;
 
         // Switch pref according to new placement to update score
@@ -87,7 +97,7 @@ for(var idx=0; idx<droppers.length; idx++){
         pref[idxTarget].criterion = criterion;
         pref[idxTarget].choice = value;
       }else{
-        value = e.target.getElementsByClassName("slider")[0].value;
+        value = this.getElementsByClassName("slider")[0].value;
         criterion = prefMap[draggedElement.getElementsByClassName("id")[0].innerText];
         pref[idxTarget].criterion = criterion;
         pref[idxTarget].choice = value;
@@ -97,7 +107,7 @@ for(var idx=0; idx<droppers.length; idx++){
       sortCereals(pref);
       console.log(pref);
 
-      e.target.prepend(draggedElement);
+      this.prepend(draggedElement);
     });
 
     dropper.addEventListener('dragenter', function(e) {
@@ -123,7 +133,7 @@ for(var i = 0; i < elements.length; i ++){
       sortCereals(pref);
       console.log(pref);
 
-      e.target.prepend(draggedElement);
+      this.prepend(draggedElement);
   });
   dropper5.addEventListener('dragenter', function(e) {
       e.preventDefault();
@@ -131,13 +141,4 @@ for(var i = 0; i < elements.length; i ++){
   dropper5.addEventListener('dragover', function(e) {
       e.preventDefault();
   });
-}
-
-
-
-var drag = document.getElementsByClassName("draggable");
-for(var i = 0; i < drag.length; i ++){
-  drag[i].addEventListener('drop',function(e){
-    e.stopPropagation();
-    });
 }
