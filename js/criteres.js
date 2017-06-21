@@ -79,8 +79,10 @@ for(var idx=0; idx<droppers.length; idx++){
     var dropperName = droppers[idx];
     var dropper = document.getElementsByClassName(dropperName)[0];
     dropper.addEventListener('drop',function(e){
+      if(this == draggedElement.parentNode){
+        return;
+      }
       var idxTarget = parseInt(this.className.match(/\d+/)[0]) - 1;
-      console.log("drop");
       // Check if spot is full before continuing
       if(this.getElementsByClassName("draggable").length > 0){
         var parent = draggedElement.parentNode;
@@ -151,6 +153,9 @@ var elements = document.getElementsByClassName("dropper5");
 for(var i = 0; i < elements.length; i ++){
   var dropper5 = elements[i];
   dropper5.addEventListener('drop',function(e){
+    if(this == draggedElement.parentNode){
+      return;
+    }
       e.preventDefault();
 
       // Update pref and view as we removed a criterion from the computation
