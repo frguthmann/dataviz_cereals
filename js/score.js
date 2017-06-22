@@ -83,14 +83,13 @@ function GetBestCereal(preferences)
 function sortCereals(preferences)
 {
   // Give a score to every cereal given the preferences
-  hasChanged = false;
   for(var i=0; i<cereals_data.length; i++){
     var oldScore = cereals_data[i].score;
     cereals_data[i].score = GetScore(i, preferences);
-    if(oldScore!=cereals_data[i].score ){
-      hasChanged = true;
-    }
   }
+
+  // if the data is not ordered, it has been changed and we must update the view
+  hasChanged = checkOrder(cereals_data, "score");
 
   console.log("Has changed: " + hasChanged);
   if(hasChanged){
@@ -119,4 +118,14 @@ Array.prototype.sortOn = function(key){
     }
     return 0;
   });
+}
+
+// Check if the data is ordered
+function checkOrder(data, key) {
+  for(var i=1; i<data.length; i++){
+    if (data[i-1][key] > data[i][key]){
+      return false;
+    }
+  }
+  return true;
 }
