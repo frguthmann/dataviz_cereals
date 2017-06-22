@@ -83,22 +83,30 @@ function GetBestCereal(preferences)
 function sortCereals(preferences)
 {
   // Give a score to every cereal given the preferences
+  hasChanged = false;
   for(var i=0; i<cereals_data.length; i++){
+    var oldScore = cereals_data[i].score;
     cereals_data[i].score = GetScore(i, preferences);
+    if(oldScore!=cereals_data[i].score ){
+      hasChanged = true;
+    }
   }
 
-  // Sort them by score, from smaller to bigger
-  cereals_data.sortOn('score');
-  console.log("Best score: " + cereals_data[0].score + " for: " + cereals_data[0].name);
+  console.log("Has changed: " + hasChanged);
+  if(hasChanged){
+    // Sort them by score, from smaller to bigger
+    cereals_data.sortOn('score');
+    console.log("Best score: " + cereals_data[0].score + " for: " + cereals_data[0].name);
 
-  // Erase model as we have a new one
-  pyramid.modelRows = [];
-  // Reset the index
-  pyramid.idxModel = [];
-  // Reload the data in the right order
-  loadData();
-  // Update the view according to the model
-  updateView();
+    // Erase model as we have a new one
+    pyramid.modelRows = [];
+    // Reset the index
+    pyramid.idxModel = [];
+    // Reload the data in the right order
+    loadData();
+    // Update the view according to the model
+    updateView();
+  }
 }
 
 // Sort on key values: https://stackoverflow.com/questions/16648076/sort-array-on-key-value

@@ -23,12 +23,18 @@ function scoreNOTFromDropper5(idxParent,idxTarget){
   pref[idxParent].choice = pref[idxTarget].choice;
   pref[idxTarget].criterion = criterion;
   pref[idxTarget].choice = value;
+  // Update view as we shuffled criteria
+  sortCereals(pref);
+  console.log(pref);
 }
 
 function scoreFromDropper5(idxTarget){
   criterion = prefMap[draggedElement.getElementsByClassName("id")[0].innerText];
   pref[idxTarget].criterion = criterion;
   pref[idxTarget].choice = value;
+  // Update view as we shuffled criteria
+  sortCereals(pref);
+  console.log(pref);
 }
 
 
@@ -111,8 +117,6 @@ for(var idx=0; idx<droppers.length; idx++){
 
         }
 
-        console.log(pref);
-
         return;
       }
 
@@ -131,10 +135,6 @@ for(var idx=0; idx<droppers.length; idx++){
         value = this.getElementsByClassName("slider")[0].value;
         scoreFromDropper5(idxTarget);
       }
-
-      // Update view as we shuffled criteria
-      sortCereals(pref);
-      console.log(pref);
 
       this.prepend(draggedElement);
     });
