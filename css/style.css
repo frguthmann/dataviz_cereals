@@ -166,14 +166,14 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .green{
-	width: 100px;
+	width: 150px;
 	background: linear-gradient(to left, orange 20%, green );
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
 }
 
 .orange{
-	width: 200px;
+	width: 175px;
 	background: orange;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
