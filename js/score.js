@@ -59,8 +59,12 @@ function GetScore(index , preferences)
     var a = 0;
     var b = 100;
 
+    // TODO : DISCUSS THE FUNCION USED !!!
+//    var rank = preferences[i]['rank'];
+    var rank = i+1;
+
     var wanted_percentage = (current_cereal[preferences[i]['criterion']] - A) * (b - a) / (B - A) + a;
-    score += Math.pow((preferences[i]['choice'] - wanted_percentage), 2);
+    score += Math.pow((preferences[i]['choice'] - wanted_percentage), 2)*rank;
   }
 
   return score;
@@ -89,7 +93,7 @@ function sortCereals(preferences)
   }
 
   // if the data is not ordered, it has been changed and we must update the view
-  hasChanged = checkOrder(cereals_data, "score");
+  hasChanged = !checkOrder(cereals_data, "score");
 
   console.log("Has changed: " + hasChanged);
   if(hasChanged){
