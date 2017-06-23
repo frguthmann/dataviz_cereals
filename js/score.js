@@ -44,6 +44,7 @@ function GetScore(index , preferences)
 {
   var current_cereal = cereals_data[index];
   var score = 0;
+  var rank = 1;
 
   for(var i=0; i<preferences.length; i++)
   {
@@ -59,9 +60,7 @@ function GetScore(index , preferences)
     var a = 0;
     var b = 100;
 
-    // TODO : DISCUSS THE FUNCION USED !!!
-//    var rank = preferences[i]['rank'];
-    var rank = i+1;
+    rank++;
 
     var wanted_percentage = (current_cereal[preferences[i]['criterion']] - A) * (b - a) / (B - A) + a;
     score += Math.pow((preferences[i]['choice'] - wanted_percentage), 2)/rank;
