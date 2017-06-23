@@ -222,7 +222,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 .dropper5{
 	border: solid #e4e211 2px;
 	width: 300px;
-	height: 80px;
+	height:auto;
 	text-align: center;
 	align-items: center;
 	border-top-right-radius: 8px;
