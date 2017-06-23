@@ -64,7 +64,7 @@ function GetScore(index , preferences)
     var rank = i+1;
 
     var wanted_percentage = (current_cereal[preferences[i]['criterion']] - A) * (b - a) / (B - A) + a;
-    score += Math.pow((preferences[i]['choice'] - wanted_percentage), 2)*rank;
+    score += Math.pow((preferences[i]['choice'] - wanted_percentage), 2)/rank;
   }
 
   return score;
