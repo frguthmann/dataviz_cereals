@@ -289,7 +289,7 @@ function displayDescription(obj){
   information.appendChild(img);
   var infos = document.createElement("div");
   var score = document.createElement("p");
-  var idxImage = img.src.match(/\d+\./)[0].match(/\d+/)[0];
+  var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]) - 1;
   score.innerHTML= ("score :" +cereals_data[idxImage].score);
   infos.appendChild(score);
   for(var i = 0; i < pref.length; i ++){
