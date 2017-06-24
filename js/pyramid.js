@@ -276,6 +276,34 @@ function endAnimefct(event){
 
 
 function displayDescription(obj){
+  var information = document.getElementById("info");
+  while(information.firstChild){
+    information.removeChild(information.firstChild);
+  }
+  console.log(obj);
+  var img = document.createElement("img");
+  img.setAttribute("class","imageInfo");
+  img.src = obj.getElementsByClassName("pyramidImage")[0].src;
+  img.setAttribute("width","50px");
+  img.setAttribute("height","75px");
+  information.appendChild(img);
+  var infos = document.createElement("div");
+  var score = document.createElement("p");
+  var idxImage = img.src.match(/\d+\./)[0].match(/\d+/)[0];
+  score.innerHTML= ("score :" +cereals_data[idxImage].score);
+  infos.appendChild(score);
+  for(var i = 0; i < pref.length; i ++){
+    if(pref[i].criterion != "NA"){
+      var cri = document.createElement("p");
+      cri.innerHTML= (pref[i].criterion  + " : " + cereals_data[idxImage][pref[i].criterion]);
+      infos.appendChild(cri);
+    }
+  }
+
+  information.appendChild(infos);
+
+
+
 /*
 	var div = obj.getElementsByClassName("chart")[0];
 	console.log(div)
