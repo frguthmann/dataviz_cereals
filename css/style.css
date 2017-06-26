@@ -233,15 +233,16 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 #info{
-
-			position: relative;
-			float:left;
-			width: 10%;
-			align-items: center;
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-			border: solid 5px #f5f16d;
-			background-color:#f7f697;
-			border-radius: 5px;
+	margin-top: 15px;
+	position: fixed;
+	visibility: hidden;
+	float:left;
+	width: 10%;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	border: solid 5px #f5f16d;
+	background-color:#f7f697;
+	border-radius: 5px;
 }

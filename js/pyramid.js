@@ -208,7 +208,7 @@ function rotateRow(row, direction){
   }
 
   if(direction == 1){
-	  rowFillerright[row].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s;position:absolute;")
+	  rowFillerright[row].setAttribute("style","transform:translate(-100%,0px); transition:all "+vitesseAnim+"s;position:absolute;");
 	  rowFillerright[row].src = pyramid.modelRows[row][(startIdx+pyramid.viewRows[row].length-1) % modelRowLength].source;
 	  rowFillerright[row].addEventListener("transitionend", function(event) {
 		  this.setAttribute("style","position:absolute;opacity:0;visibility:hidden;margin-left:300%");
@@ -280,9 +280,7 @@ function endAnimefct(event){
 
 function displayDescription(obj){
   var information = document.getElementById("info");
-  while(information.firstChild){
-    information.removeChild(information.firstChild);
-  }
+  information.setAttribute("style","visibility: visible;");
   console.log("obj");
   console.log(obj);
   var img = document.createElement("img");
@@ -290,6 +288,7 @@ function displayDescription(obj){
   img.src = obj.getElementsByClassName("pyramidImage")[0].src;
   img.setAttribute("width","50px");
   img.setAttribute("height","75px");
+  img.setAttribute("style","margin-top: 5px");
   information.appendChild(img);
   var infos = document.createElement("div");
   var score = document.createElement("p");
@@ -318,7 +317,11 @@ function displayDescription(obj){
 }
 
 function hideDescription(obj){
-  //console.log(obj + " not over");
+  var information = document.getElementById("info");
+  while(information.firstChild){
+    information.removeChild(information.firstChild);
+  }
+  information.setAttribute("style","visibility: hidden;");
 }
 
 // Détection du mouseover
