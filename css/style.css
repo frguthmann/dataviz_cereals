@@ -33,7 +33,7 @@
 	min-width:400px;
 	position: relative;
 	width: 80%;
-    float: left;
+  float: left;
 }
 
 #pyramid ul{
@@ -245,4 +245,12 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	border: solid 5px #f5f16d;
 	background-color:#f7f697;
 	border-radius: 5px;
+}
+
+#texteinfo{
+	font-size: 14px;
+}
+h4{
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
