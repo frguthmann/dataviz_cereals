@@ -231,3 +231,9 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	border-bottom-left-radius: 8px;
 
 }
+
+#info{
+	width: 200px;
+	heigth: auto;
+	background-color: #fff;
+}
