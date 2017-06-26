@@ -18,7 +18,9 @@ var pyramid = {
 var rowFillerleft = [];
 var rowFillerright = [];
 
+console.log("pyramid");
 console.log(pyramid);
+console.log("cereals_data");
 console.log(cereals_data);
 
 var vitesseAnim = 0.3;
@@ -264,7 +266,8 @@ function animateCell(infos){
 
 window.onresize = function(event) {
 	treeheight=document.documentElement.clientHeight;
-	console.log(treeheight)
+  console.log("treeheight");
+	console.log(treeheight);
 }
 
 function endAnimefct(event){
@@ -280,6 +283,7 @@ function displayDescription(obj){
   while(information.firstChild){
     information.removeChild(information.firstChild);
   }
+  console.log("obj");
   console.log(obj);
   var img = document.createElement("img");
   img.setAttribute("class","imageInfo");
@@ -290,7 +294,7 @@ function displayDescription(obj){
   var infos = document.createElement("div");
   var score = document.createElement("p");
   var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]) - 1;
-  score.innerHTML= ("score :" +cereals_data[idxImage].score);
+  score.innerHTML= ("score :" + Math.floor(cereals_data[idxImage].score));
   infos.appendChild(score);
   for(var i = 0; i < pref.length; i ++){
     if(pref[i].criterion != "NA"){
