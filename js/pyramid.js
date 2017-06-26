@@ -277,14 +277,23 @@ function endAnimefct(event){
 	//event.target.removeEventListener("transitionend", endAnimefct);
 }
 
+function findbox(idx){
+  for(var i = 0; i < cereals_data.length; i ++){
+    if(cereals_data[i].id == idx){
+      console.log(cereals_data[i]);
+      return(cereals_data[i]);
+    }
+  }
+  return([]);
+}
+
 
 function displayDescription(obj){
+  console.log(cereals_data);
   var information = document.getElementById("info");
   while(information.firstChild){
     information.removeChild(information.firstChild);
   }
-  console.log("obj");
-  console.log(obj);
   var img = document.createElement("img");
   img.setAttribute("class","imageInfo");
   img.src = obj.getElementsByClassName("pyramidImage")[0].src;
@@ -293,18 +302,22 @@ function displayDescription(obj){
   information.appendChild(img);
   var infos = document.createElement("div");
   var score = document.createElement("p");
-  var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]) - 1;
-  if(Math.floor(cereals_data[idxImage].score)){
-    score.innerHTML= ("score :" + Math.floor(cereals_data[idxImage].score));
+  var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]);
+  console.log("idxImage");
+  console.log(img.src);
+
+  var box = findbox(idxImage);
+  if(Math.floor(box.score)){
+    score.innerHTML= ("score :" + Math.floor(box.score));
   }
   else{
-    score.innerHTML = "score : 0";
+    score.innerHTML = "score : 0 ";
   }
   infos.appendChild(score);
   for(var i = 0; i < pref.length; i ++){
     if(pref[i].criterion != "NA"){
       var cri = document.createElement("p");
-      cri.innerHTML= (pref[i].criterion  + " : " + cereals_data[idxImage][pref[i].criterion]);
+      cri.innerHTML= (pref[i].criterion  + " : " + box[pref[i].criterion]);
       infos.appendChild(cri);
     }
   }
