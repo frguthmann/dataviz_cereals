@@ -294,7 +294,12 @@ function displayDescription(obj){
   var infos = document.createElement("div");
   var score = document.createElement("p");
   var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]) - 1;
-  score.innerHTML= ("score :" + Math.floor(cereals_data[idxImage].score));
+  if(Math.floor(cereals_data[idxImage].score)){
+    score.innerHTML= ("score :" + Math.floor(cereals_data[idxImage].score));
+  }
+  else{
+    score.innerHTML = "score : 0";
+  }
   infos.appendChild(score);
   for(var i = 0; i < pref.length; i ++){
     if(pref[i].criterion != "NA"){
