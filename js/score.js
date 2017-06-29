@@ -1,5 +1,6 @@
 var pref = [{"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}, {"criterion":"NA", "choice":"-1"}];
 var prefMap = {"Sucre":"sugars", "Sel":"sodium", "Graisse":"fat", "Calories":"calories", "Glucides":"carbo", "Protéines":"protein", "Fibres":"fiber", "Potassium":"potass", "Vitamines":"vitamins"};
+var reversePrefMap = {"sugars":"Sucre", "sodium":"Sel", "fat":"Graisse", "calories":"Calories", "carbo":"Glucides", "protein":"Protéines", "fiber":"Fibres", "potass":"Potassium", "vitamins":"Vitamines"};
 var Intervals = {};
 
 function InitializeIntervals()

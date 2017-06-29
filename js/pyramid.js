@@ -289,58 +289,55 @@ function findbox(idx){
 
 
 function displayDescription(obj){
-  console.log(cereals_data);
+  var idxImage = parseInt(obj.getElementsByClassName("pyramidImage")[0].src.match(/\d+\./)[0].match(/\d+/)[0]);
+  var box = findbox(idxImage);
   var information = document.getElementById("info");
-  information.setAttribute("style","visibility: visible;");
-  console.log("obj");
-  console.log(obj);
+  
   var titre = document.createElement("h4");
-  titre.innerHTML = "Informations produit";
+  titre.innerHTML = box.name;
+  information.setAttribute("style","visibility: visible;");
   information.appendChild(titre);
-  var att = document.createElement("span");
-  att.id = "texteinfo";
-  att.innerHTML = "Un score bas indique une bonne correspondance avec vos choix";
-  information.appendChild(att);
+  
   var img = document.createElement("img");
   img.setAttribute("class","imageInfo");
   img.src = obj.getElementsByClassName("pyramidImage")[0].src;
-  img.setAttribute("width","50px");
-  img.setAttribute("height","75px");
+  var width = 80;
+  height = width * 1.5;
+  img.setAttribute("width",width + "px");
+  img.setAttribute("height",height + "px");
   img.setAttribute("style","margin-top: 5px");
   information.appendChild(img);
   var infos = document.createElement("div");
-  var score = document.createElement("p");
-  var idxImage = parseInt(img.src.match(/\d+\./)[0].match(/\d+/)[0]);
-  console.log("idxImage");
-  console.log(img.src);
+  var description = document.createElement("p");
 
-  var box = findbox(idxImage);
   if(Math.floor(box.score)){
-    score.innerHTML= ("score :" + Math.floor(box.score));
+    description.innerHTML= ("Score : " + Math.floor(box.score) + "<br>");
   }
   else{
-    score.innerHTML = "score : 0 ";
+    description.innerHTML = "Score : 0 " + "<br>";
   }
-  infos.appendChild(score);
+
   for(var i = 0; i < pref.length; i ++){
     if(pref[i].criterion != "NA"){
-      var cri = document.createElement("p");
-      cri.innerHTML= (pref[i].criterion  + " : " + box[pref[i].criterion]);
-      infos.appendChild(cri);
+      description.innerHTML += (reversePrefMap[pref[i].criterion]  + " : " + box[pref[i].criterion]);
+      if(pref[i].criterion == "protein" || pref[i].criterion == "fat" || pref[i].criterion == "fiber" || pref[i].criterion == "carbo" || pref[i].criterion == "sugars"){
+        description.innerHTML += " g";
+      }else if(pref[i].criterion == "sodium" || pref[i].criterion == "potass"){
+        description.innerHTML += " mg";
+      }else if(pref[i].criterion == "vitamins"){
+        description.innerHTML += " %";
+      }
+      description.innerHTML += "<br>";
     }
   }
+  infos.appendChild(description);
 
   information.appendChild(infos);
 
-
-
-/*
-	var div = obj.getElementsByClassName("chart")[0];
-	console.log(div)
-	var options = {'title':'My Average Day', legend: {position: 'none'}};
-    var chart = new google.visualization.ColumnChart(div);
-	chart.draw(chartdata, options);
-	*/
+  var att = document.createElement("span");
+  att.id = "texteinfo";
+  att.innerHTML = "* Un score bas indique une bonne correspondance avec vos choix";
+  information.appendChild(att);
 }
 
 function hideDescription(obj){
@@ -359,20 +356,6 @@ $( ".pyramidPicture" )
   .mouseout(function() {
     hideDescription(this);
   });
-
-/*
-function drawChart() {
-	console.log("AAAAAAAAAAAAAYYYYYYYYYAAAAAAAAA")
-	chartdata = google.visualization.arrayToDataTable([
-         ['Element', 'Density', { role: 'style' }],
-         ['Copper', 8.94, '#b87333'],            // RGB value
-         ['Silver', 10.49, 'silver'],            // English color name
-         ['Gold', 19.30, 'gold'],
-
-       ['Platinum', 21.45, 'color: #e5e4e2' ], // CSS-style declaration
-      ]);
-}
-*/
 
 function MouseWheelHandler(e) {
 	var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
