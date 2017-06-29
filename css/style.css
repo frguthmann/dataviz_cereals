@@ -82,9 +82,11 @@ body{
 		display: flex;
 		flex-direction: column;
 		border: solid 5px #6aa4e5;
-		box-shadow: 8px 8px 8px #6aa4e5;
+		box-shadow: 8px 8px 12px #4b74a2;
 		background-color:#d8e7f8;
 		border-radius: 5px;
+		margin-bottom: 8px;
+		margin-right: 8px;
 	}
 
 
@@ -247,6 +249,8 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	border: solid 5px #6aa4e5;
 	background-color:#d8e7f8;
 	border-radius: 5px;
+	box-shadow: -8px 8px 12px #4b74a2;
+	margin-left: 8px;
 }
 
 #texteinfo{
