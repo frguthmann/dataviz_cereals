@@ -294,6 +294,13 @@ function displayDescription(obj){
   information.setAttribute("style","visibility: visible;");
   console.log("obj");
   console.log(obj);
+  var titre = document.createElement("h4");
+  titre.innerHTML = "Informations produit";
+  information.appendChild(titre);
+  var att = document.createElement("span");
+  att.id = "texteinfo";
+  att.innerHTML = "Un score bas indique une bonne correspondance avec vos choix";
+  information.appendChild(att);
   var img = document.createElement("img");
   img.setAttribute("class","imageInfo");
   img.src = obj.getElementsByClassName("pyramidImage")[0].src;
