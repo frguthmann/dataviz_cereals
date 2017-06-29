@@ -62,14 +62,14 @@ header{
 	padding: 0;
 	overflow: hidden;
 	text-align: center;
-	background-image: url('../images/top_fond.jpeg');
+	background-color: #113b6a;
 	background-position: top;
-	border: solid 3px #f8f69d;
+	border: solid 3px #0d2c4e;
 	color: #fff;
 }
 
 body{
-	background: radial-gradient(circle, #FFEFD5, #FBCEB1);
+	background-color: #a1c1e5 ;
 	margin: 0;
 }
 
@@ -81,8 +81,9 @@ body{
 		text-align: center;
 		display: flex;
 		flex-direction: column;
-		border: solid 5px #f5f16d;
-		background-color:#f7f697;
+		border: solid 5px #6aa4e5;
+		box-shadow: 8px 8px 8px #6aa4e5;
+		background-color:#d8e7f8;
 		border-radius: 5px;
 	}
 
@@ -208,7 +209,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .dropper1, .dropper2, .dropper3, .dropper4{
-	border: solid #e4e211 2px;
+	border: solid #113b6a 2px;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
 	border-top-left-radius: 8px;
@@ -220,7 +221,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 }
 
 .dropper5{
-	border: solid #e4e211 2px;
+	border: solid #113b6a 2px;
 	width: 300px;
 	height:auto;
 	text-align: center;
@@ -232,6 +233,7 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 
 }
 
+
 #info{
 	margin-top: 15px;
 	position: fixed;
@@ -242,8 +244,8 @@ outline: none; /* Removes the blue border. You should probably do some kind of f
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	border: solid 5px #f5f16d;
-	background-color:#f7f697;
+	border: solid 5px #6aa4e5;
+	background-color:#d8e7f8;
 	border-radius: 5px;
 }
 
