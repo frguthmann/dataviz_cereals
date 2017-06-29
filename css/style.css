@@ -1,5 +1,5 @@
-@font-face { font-family: RobotoBold; src: url('../data/RobotoBold.ttf'); } 
-@font-face { font-family: RobotoBlack; src: url('../data/RobotoBlack.ttf'); } 
+@font-face { font-family: RobotoBold; src: url('../data/RobotoBold.ttf'); }
+@font-face { font-family: RobotoBlack; src: url('../data/RobotoBlack.ttf'); }
 
 /* Make all pictures the same size and align text to the middle with them */
 .pyramidPicture{
@@ -26,8 +26,18 @@
 }
 
 .buttonpyramid{
-	width:20px;
-	height:20px;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+	background-color: #008CBA;
+	border-color: blue;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.buttonpyramid:hover
+{
+	    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #pyramid{

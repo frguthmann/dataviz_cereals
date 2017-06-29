@@ -85,7 +85,8 @@ function firstPyramidSetup(){
 			var li = document.createElement("li");
 			var button = document.createElement("button");
 			button.type = "button";
-			button.innerHTML = "<";
+			button.innerHTML = "&laquo;";
+      button.style.marginRight = "15px";
 			button.setAttribute("class","buttonpyramid");
 			button.setAttribute("onclick","rotateRow("+r+",1);")
 			li.appendChild(button);
@@ -109,7 +110,8 @@ function firstPyramidSetup(){
 		var button = document.createElement("button");
 		button.setAttribute("onclick","rotateRow("+r+",-1);")
 		button.type = "button";
-		button.innerHTML = ">";
+		button.innerHTML = "&raquo;";
+    button.style.marginLeft = "15px";
 		button.setAttribute("class","buttonpyramid");
 		li.appendChild(button);
 		HTMLrow.appendChild(li);
@@ -292,12 +294,12 @@ function displayDescription(obj){
   var idxImage = parseInt(obj.getElementsByClassName("pyramidImage")[0].src.match(/\d+\./)[0].match(/\d+/)[0]);
   var box = findbox(idxImage);
   var information = document.getElementById("info");
-  
+
   var titre = document.createElement("h4");
   titre.innerHTML = box.name;
   information.setAttribute("style","visibility: visible;");
   information.appendChild(titre);
-  
+
   var img = document.createElement("img");
   img.setAttribute("class","imageInfo");
   img.src = obj.getElementsByClassName("pyramidImage")[0].src;
